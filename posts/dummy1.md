@@ -1,8 +1,8 @@
 ---
-title: My Third Blog Post
+title: My Dummy 1 Blog Post
 description: This is the third post on my blog
 tags: post
-date: 2021-06-21
+date: 2021-06-18
 layout: layouts/post.njk
 ---
 
