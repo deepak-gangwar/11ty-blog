@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+
+{# This will be the layout for all static pages on the site. #}
+
+{# 
+This is known as layout chaining, and it allows us to reuse 
+a template while adding unique elements that are specific to 
+the new template, which helps avoid unnecessary repetition of 
+basic site structures. 
+#}
+
+<article class="page-layout">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content mt-5">
+          <h1>{{ title }}</h1>
+          {{ content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
