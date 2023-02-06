@@ -21,7 +21,7 @@ new layout for each one.
         <article class="content mt-5">
           <h1 class="title">{{ title }}</h1>
           <p class="subtitle is-6">
-            Published on: <time datetime="{{ page.date }}">{{ page.date }}</time>
+            Published on: <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
           </p>
           {{ content | safe }}
         </article>
