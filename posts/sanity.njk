@@ -1,0 +1,19 @@
+---
+title: My Sanity Blog Post
+description: This is a blog post whose content is coming from sanity
+tags: post
+date: 2021-06-22
+layout: layouts/post.njk
+pagination:
+    data: posts
+    size: 1
+    alias: post
+permalink: "/{{ post.slug.current }}/"
+---
+
+
+{# This created so many fucking problems, I couldn't add markdown as my blogpost type
+so they only thing missing was to pass through safe because it was rendering unparse html directy #}
+{# {{ post.body | sanityToHTML }} #}
+
+{{ post.body | sanityToHTML | safe }}

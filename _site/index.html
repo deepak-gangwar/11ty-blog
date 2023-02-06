@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Homepage</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4FJE419EX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W4FJE419EX');
+  </script>
 </head>
 <body>
   <header><nav class="navbar is-light" role="navigation" aria-label="main navigation">
@@ -42,6 +51,7 @@
   </div>
 </section>
 
+
 <section class="postlist mt-3 pt-3">
   <div class="container">
     <h2 class="title has-text-centered mt-3 mb-6">Recent posts</h2>
@@ -49,6 +59,26 @@
       
       
          
+      
+        
+          <div class="column">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  My Sanity Blog Post
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  This is a blog post whose content is coming from sanity
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a href="/sanity-blog-post/" class="button is-fullwidth is-link card-footer-item">Read article</a>
+              </footer>
+            </div>
+          </div>
+          
       
         
           <div class="column">
@@ -91,24 +121,6 @@
           
       
         
-          <div class="column">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  My First Blog Post
-                </p>
-              </header>
-              <div class="card-content">
-                <div class="content">
-                  This is the first post on my blog
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="/posts/first-post/" class="button is-fullwidth is-link card-footer-item">Read article</a>
-              </footer>
-            </div>
-          </div>
-          
       
         
       
@@ -121,6 +133,7 @@
     </div>
   </div>
 </section>
+
   </main>
 </body>
 </html>
