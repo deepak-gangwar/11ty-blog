@@ -4,6 +4,7 @@ layout: layouts/base.njk
 pagination:
   data: collections.post
   size: 3
+  alias: posts
   reverse: true
 ---
 
@@ -13,6 +14,16 @@ pagination:
 
 <h1>Archives</h1>
 
+
+
+{# HOW POSTS WILL LOOK IN ARCHIVES PAGE #}
+<ul>
+{% for post in posts %}
+<li><a href="{{ post.url }}">{{ post.data.title }}</a> <i>(written {{ post.date }})</i></li>
+{% endfor %}
+</ul>
+
+{# 
 <ul>
 {% for post in allPosts %}
     {% if loop.index0 < 3 %}
@@ -35,7 +46,7 @@ pagination:
         </li>
     {% endif %}
 {% endfor %}
-<ul>
+<ul> #}
 
 <ul>
   {% for post in allPosts | slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage) %}
@@ -47,6 +58,8 @@ pagination:
 <br>
 <br>
 
+
+{# --------------   PAGINATION COMPONENT   --------------- #}
 
 <nav role="navigation" aria-labelledby="pagination">
   <h2 id="my-pagination">This is my Pagination</h2>
