@@ -3,4 +3,11 @@ title: Homepage
 layout: layouts/base.njk
 ---
 
-<h1>Welcome to this brand new Eleventy website!</h1>
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">{{ site.title }}</h1>
+      <h2 class="subtitle">{{ site.description }}</h2>
+    </div>
+  </div>
+</section>
