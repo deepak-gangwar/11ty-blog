@@ -24,6 +24,14 @@ new layout for each one.
           <p class="subtitle is-6">
             Published on: <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
           </p>
+          <ul>
+            {% for tag in tags %}
+              <li>
+                <a href="/categories/{{ tag | slugify }}">{{tag}}</a>
+                {# <a href="/categories/{{ tag | slugify }}">{{tag}}</a> #}
+              </li>
+            {% endfor %}
+          </ul>
           {{ content | safe }}
         </article>
       </div>

@@ -3,7 +3,9 @@ title: My Dummy 3 Blog Post
 description: This is the third post on my blog
 author: Deepak Gangwar
 
-tags: post
+tags: 
+    - post
+
 date: 2021-06-16
 layout: layouts/post.njk
 ---

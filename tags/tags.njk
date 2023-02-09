@@ -1,0 +1,25 @@
+---
+title: Tags
+layout: layouts/page.njk
+
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    addAllPagesToCollections: true
+
+eleventyComputed: 
+    title: "{{ tag }}"
+
+permalink: /categories/{{ tag | slugify }}/
+---
+
+<!-- You can also use an HTML or Nunjucks file instead of Markdown if you prefer. -->
+
+<h1>Posts tagged with {{ tag }}</h1>
+
+{% for post in collections[tag] %}
+    <li>
+        <a href="{{post.url}}">{{ post.data.title }}</a>
+    </li>
+{% endfor %}
