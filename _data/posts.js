@@ -11,14 +11,13 @@ const client = sanityClient({
 module.exports = async function () {
     const query = `
     *[ _type == "post" && !(_id in path("drafts.**")) ]{
-      title,
+      title { current },
       slug { current },
-      categories,
       publishedAt,
       body
     } | order(publishedAt desc)
     `
-    // const query = '*[_type == "post"]'
+    // const query = '*[_type == "post"] | order(publishedAt desc)'
     const params = {}
 
     const data = await client.fetch(query, params)
