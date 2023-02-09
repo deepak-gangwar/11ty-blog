@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+{#The contents in double curly braces are Nunjucks variables that will be replaced accordingly when a derivative page is being built#}
+<title>{{ title }}</title>
 
-<title>My Third Blog Post</title>
-
-<meta name="author" content=/>
+<meta name="author" content={{ author }}/>
 <meta name="copyright" content="Copyright &copy; 2023 Deepak Gangwar."/>
-<meta name="description" content=This is the third post on my blog/>
+<meta name="description" content={{ description }}/>
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US"/>
@@ -57,57 +54,3 @@
 
     gtag('config', 'G-W4FJE419EX');
 </script>
-</head>
-<body>
-  <header><nav class="navbar is-light" role="navigation" aria-label="main navigation">
-  <div class="navbar-start">
-    <div class="navbar-item has-text-weight-bold">
-      Deepak Gangwar
-    </div>
-  </div>
-  <div class="navbar-end">
-    <a href="/" class="navbar-item">
-      Home
-    </a>
-
-    <a href="/about" class="navbar-item">
-      About Me
-    </a>
-
-    <a href="/contact" class="navbar-item">
-      Contact
-    </a>
-
-    <a href="/archives" class="navbar-item">
-      Archives
-    </a>
-  </div>
-</nav></header>
-  <main>
-    
-
-
-
-
-<section class="page-layout">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
-        <article class="content mt-5">
-          <h1 class="title">My Third Blog Post</h1>
-          <p class="subtitle is-6">
-            Published on: <time datetime="Mon Jun 21 2021 05:30:00 GMT+0530 (India Standard Time)">21 Jun 2021</time>
-          </p>
-          <!-- Notice how the URL corresponds to the location of the file in the 
-project (excluding the extension). This is how URLs are handled by default, 
-but they can be changed to some other format through the permalink key. -->
-<p>You’ll find this post in your <code>posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>eleventy --serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-  </main>
-</body>
-</html>
