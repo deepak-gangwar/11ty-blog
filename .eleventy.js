@@ -41,4 +41,16 @@ module.exports = function (eleventyConfig) {
       blocks: value,
     });
   });
+
+  // Set up input and output folders
+  return {
+    dir: { 
+      // input: "src", 
+      // includes: "_includes", 
+      // output: "_site"
+    },
+    templateFormats: ['md', 'njk'],
+    dataTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk'
+  }
 };
