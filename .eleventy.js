@@ -1,5 +1,6 @@
 const { DateTime } = require('luxon');
 const blocksToHtml = require('@sanity/block-content-to-html');
+const htmlmin = require("html-minifier");
 
 
 module.exports = function (eleventyConfig) {
@@ -13,6 +14,20 @@ module.exports = function (eleventyConfig) {
 
   // Watch the `css` directory for changes
   eleventyConfig.addWatchTarget('css');
+
+  // To minify HTML
+  eleventyConfig.addTransform("htmlmin",  function(content,  outputPath) {
+    if(outputPath && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+    
+    return content;
+  });
 
   // lines describe how to add a custom filter to Eleventy
   eleventyConfig.addFilter('readableDate', (dateObj) => {
