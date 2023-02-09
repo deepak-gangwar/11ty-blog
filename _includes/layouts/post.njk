@@ -20,6 +20,7 @@ new layout for each one.
       <div class="column is-8 is-offset-2">
         <article class="content mt-5">
           <h1 class="title">{{ title }}</h1>
+          <p>Written by {{ author }}</p>
           <p class="subtitle is-6">
             Published on: <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
           </p>
