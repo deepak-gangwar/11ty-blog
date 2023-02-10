@@ -9,6 +9,19 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      description: 'Page Title - What shows up on browser tab and goes in <head>'
+    }),
+    defineField({
+      name: 'heading',
+      title: 'Heading',
+      type: 'string',
+      description: 'Main heading for the article'
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+      description: 'To go in <head> think about SEO'
     }),
     defineField({
       name: 'slug',

@@ -11,8 +11,9 @@ const client = sanityClient({
 module.exports = async function () {
     const query = `
     *[ _type == "post" && !(_id in path("drafts.**")) ]{
-      title { current },
+      title,
       slug { current },
+      author,
       publishedAt,
       body
     } | order(publishedAt desc)
