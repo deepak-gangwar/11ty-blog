@@ -6,6 +6,9 @@ const htmlmin = require("html-minifier");
 module.exports = function (eleventyConfig) {
   // Fucking ignore the node modules inside sanity
   eleventyConfig.ignores.add("sanity/node_modules/**");
+
+  // Used in social sharing feature
+  // eleventyConfig.addGlobalData("rootURL", "https://www.11ty.deepakgangwar.me");
   
   // Copy the `css` directory to the output
   eleventyConfig.addPassthroughCopy('css');
