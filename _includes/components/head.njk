@@ -5,9 +5,9 @@
 {#The contents in double curly braces are Nunjucks variables that will be replaced accordingly when a derivative page is being built#}
 <title>{{ title }}</title>
 
-<meta name="author" content={{ author }}/>
+<meta name="author" content="{% if author %}{{ author }}{% else %}Deepak Gangwar{% endif %}"/>
 <meta name="copyright" content="Copyright &copy; 2023 Deepak Gangwar."/>
-<meta name="description" content={{ description }}/>
+<meta name="description" content="{% if description %}{{ description }}{% else %}From Javascript to web dev to WebGL and beyond, Deepak Gangwar's blog is your guide to the world of web development. Documenting articles and tutorials of my learnings and advancements in the field.{% endif %}"/>
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US"/>
