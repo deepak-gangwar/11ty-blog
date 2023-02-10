@@ -1,5 +1,6 @@
 ---
 title: My Third Blog Post
+heading: Third one
 description: This is the third post on my blog
 author: Deepak Gangwar
 

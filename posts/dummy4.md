@@ -1,5 +1,6 @@
 ---
 title: My Dummy 4 Blog Post
+heading: My Dummy 4 Blog Post
 description: This is the third post on my blog
 author: Deepak Gangwar
 

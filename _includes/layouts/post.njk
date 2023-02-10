@@ -19,7 +19,8 @@ new layout for each one.
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <article class="content mt-5">
-          <h1 class="title">{{ title }}</h1>
+          {# Updated title to heading, this way you can have main heading other than page title #}
+          <h1 class="title">{{ heading }}</h1>
           <p>Written by {{ author }}</p>
           <p class="subtitle is-6">
             Published on: <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>

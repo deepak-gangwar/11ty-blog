@@ -1,5 +1,6 @@
 ---
 title: My First Blog Post
+heading: My First Blog Post
 description: This is the first post on my blog
 author: Deepak Gangwar
 

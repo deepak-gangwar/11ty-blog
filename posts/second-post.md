@@ -1,5 +1,6 @@
 ---
 title: My Second Blog Post
+heading: My Second Blog Post
 description: This is the second post on my blog
 author: Deepak Gangwar
 
