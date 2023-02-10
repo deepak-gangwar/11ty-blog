@@ -36,6 +36,11 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // To be used in providing reading time for articles
+  eleventyConfig.addFilter("numCommas", function(value) {
+		return value.toLocaleString()
+	});
+
   eleventyConfig.addFilter('sanityToHTML', function(value) {
     return blocksToHtml({
       blocks: value,

@@ -14,6 +14,16 @@ layouts for posts and pages, so it’s good practice to create a
 new layout for each one. 
 #}
 
+
+{# For providing reading time #}
+{% set regExpCode = r/<pre class=(.|\n)*?<\/pre>/gm %}
+{% set fixedContent = content | replace(regExpCode, "") | striptags %}
+{% set wordCount = fixedContent | wordcount %}
+{% set readingRate = 225 %}
+{% set readingTime = (wordCount/readingRate) | round %}
+{% if readingTime < 1 %}{% set readingTime = 1 %}{% endif %}
+
+
 <section class="page-layout">
   <div class="container">
     <div class="columns">
@@ -22,9 +32,21 @@ new layout for each one.
           {# Updated title to heading, this way you can have main heading other than page title #}
           <h1 class="title">{{ heading }}</h1>
           <p>Written by {{ author }}</p>
+          
+          {# --------------- Date ------------------ #}
           <p class="subtitle is-6">
             Published on: <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
           </p>
+          
+          {# --------------- Reading time ---------- #}
+          <p>
+            {# Different styles of reading time #}
+            {# {{ wordCount | numCommas }} words • Reading time: {{ readingTime }} minute{% if readingTime > 1 %}s{% endif %} #}
+            {# Reading time: {{ readingTime }} minute{% if readingTime > 1 %}s{% endif %} #}
+            {{ readingTime }} min read
+          </p>
+
+          {# --------------- Tags ------------------ #}
           <ul>
             {% for tag in tags %}
               <li>
@@ -33,6 +55,8 @@ new layout for each one.
               </li>
             {% endfor %}
           </ul>
+
+          {# --------------- Content --------------- #}
           {{ content | safe }}
         </article>
       </div>
