@@ -19,17 +19,23 @@
 /* Fonts */
 @font-face {
     font-family: 'canela';
-    src: url('/assets/fonts/Canela.woff2');
+    font-style: normal;
+    font-display: block;
+    src: url('/assets/fonts/Canela.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'neue montreal';
-    src: url('/assets/fonts/NeueMontreal.woff2');
+    font-style: normal;
+    font-display: block;
+    src: url('/assets/fonts/NeueMontreal.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'gt-walsheim';
-    src: url('/assets/fonts/GT-Walsheim.woff2');
+    font-style: normal;
+    font-display: block;
+    src: url('/assets/fonts/GT-Walsheim.woff2') format('woff2');
 }
 
 body {
@@ -107,4 +113,48 @@ a {
 
 .underline__span {
     /* color: var(--color-gray-800); */
+}
+
+
+/* Contact Page styles */
+
+.contact__subtitle {
+    font-family: 'neue montreal';
+    letter-spacing: 0.01em;
+    opacity: 0.7;
+    /* text-transform: uppercase; */
+}
+
+.contact__heading {
+    display: flex;
+    align-items: center;
+}
+
+.contact__title {
+    /* font-family: var(--font-serif); */
+    font-family: 'canela';
+    font-size: var(--font-size-3xl);
+    font-size: 7vw;
+    letter-spacing: -0.03em;
+    /* line-height: var(--leading-tighter); */
+    line-height: 110%;
+    font-weight: normal;
+    /* margin-bottom: var(--space-s); */
+    max-width: 1200px;
+    display: inline-block;
+}
+
+.accent {
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: var(--color-gray-800);
+    opacity: 0.4;
+    margin-right: 20px;
+}
+
+.contact__link {
+    font-family: 'neue montreal';
+    letter-spacing: 0.01em;
+    opacity: 0.7;
 }
