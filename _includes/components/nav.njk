@@ -46,13 +46,13 @@
     {# Links to other pages #}
     <ul class="header__list">
       <li class="header__item" class="underline__container">
-        <a type="page" href="/" class="header__link header__link--active underline__link" role="link" aria-label="Go to homepage"><span class="underline__span">Home</span></a>
+        <a type="page" href="/" class="header__link {{ 'header__link--active' if '/' == page.url }} underline__link" role="link" aria-label="Go to homepage"><span class="underline__span">Home</span></a>
       </li>
       <li class="header__item" class="underline__container">
-        <a type="page" href="/archives" class="header__link underline__link" role="link" aria-label="Go to archives page"><span class="underline__span">Archives</span></a>
+        <a type="page" href="/archives" class="header__link {{ 'header__link--active' if '/archives' in page.url }} underline__link" role="link" aria-label="Go to archives page"><span class="underline__span">Archives</span></a>
       </li>
       <li class="header__item" class="underline__container">
-        <a type="page" href="/about" class="header__link underline__link" role="link" aria-label="Go to page about me"><span class="underline__span">About Me</span></a>
+        <a type="page" href="/about" class="header__link {{ 'header__link--active' if '/about' in page.url }} underline__link" role="link" aria-label="Go to page about me"><span class="underline__span">About Me</span></a>
       </li>
     </ul>
 

@@ -120,7 +120,7 @@
 }
 
 .header__link--active,.header__link:hover {
-    color: #060508;
+    color: var(--color-bright-crimson);
 }
 
 .header__buttons {
