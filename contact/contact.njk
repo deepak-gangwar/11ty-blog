@@ -1,6 +1,7 @@
 ---
 title: Contact
 layout: layouts/page.njk
+btnTitle: Back to articles
 ---
 
 <!-- You can also use an HTML or Nunjucks file instead of Markdown if you prefer. -->
@@ -26,5 +27,6 @@ layout: layouts/page.njk
         </li>
     </ul>
 
-    <button>Back to articles</button>
+    {# <button>Back to articles</button> #}
+    {% include "components/uns-btn.njk" %}
 </div>
