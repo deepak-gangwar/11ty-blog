@@ -196,4 +196,5 @@
 
 .button__label {
     padding-left: 10px;
+    z-index: 1;
 }
