@@ -170,7 +170,7 @@
 
 .button__primary {
     cursor: pointer;
-    color: #ffffff;
+    color: var(--color-accent);
     position: relative;
     outline: none;
     border: none;
@@ -183,7 +183,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    background: var(--color-accent);
+    background: var(--color-cute-purple);
     border-radius: 9999px;
 }
 
