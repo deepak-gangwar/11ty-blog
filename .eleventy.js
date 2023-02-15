@@ -11,7 +11,9 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addGlobalData("rootURL", "https://www.11ty.deepakgangwar.me");
   
   // Copy the `css` directory to the output
-  eleventyConfig.addPassthroughCopy('css');
+  // eleventyConfig.addPassthroughCopy('css');
+  // commented this because now I am using multiple css files and import syntax
+  // Thus using nunjucks to create my styles.css file
 
   eleventyConfig.addPassthroughCopy('assets');
 

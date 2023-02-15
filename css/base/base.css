@@ -1,0 +1,32 @@
+body {
+    position: relative;
+    font-family: 'gt-walsheim', system-ui, sans-serif;
+    color: var(--color-accent);
+    background-color: var(--color-primary);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* added this weird thing to fix spacing for copyright, can remove this when all styles are done */
+main {
+    min-height: 80vh;
+}
+
+/* This is causing some issues, think what to do of it. */
+
+#copyright {
+    padding: 20px 0;
+    position: absolute;
+    /* position: relative; */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    text-align: center;
+    /* width: max-content; */
+    width: 100%;
+
+}

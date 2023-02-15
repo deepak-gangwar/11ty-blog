@@ -1,0 +1,120 @@
+/* Unseen.co button component styles */
+
+.uns-btn__container {
+    display: inline-block;
+    width: fit-content;
+}
+
+.uns-btn {
+    width: fit-content;
+    position: relative;
+    display: block;
+    background: var(--color-accent);
+    border-radius: 100px;
+    color: #fff;
+    padding: calc(0.8rem - 2px) 1.5rem;
+    cursor: pointer;
+    font-size: 1.05rem;
+    line-height: .9rem;
+    letter-spacing: 0.01em;
+    overflow: hidden;
+    transition: all .5s,width 1s cubic-bezier(.73,.29,0,1);
+    border: none;
+    font-family: var(--font-sans);
+    transform-origin: bottom;
+}
+
+.uns-btn.white {
+    background: #fff;
+    color: var(--color-accent)
+}
+
+.uns-btn.white::before {
+    background: var(--color-accent)
+}
+
+.uns-btn.white span:last-child {
+    color: #fff
+}
+
+.uns-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #fff;
+    transition: height .5s cubic-bezier(.73,.29,0,1);
+    transform-origin: bottom;
+}
+
+.uns-btn__content {
+    position: relative;
+    transition: all .8s cubic-bezier(.73,.29,0,1);
+    text-align: center;
+    display: flex;
+    gap: 0.55rem;
+    align-items: center;
+    width: fit-content;
+}
+
+.uns-btn__content--cloned {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    opacity: 0;
+    color: var(--color-accent);
+    transform: translateX(-50%) translateY(-250%);
+}
+
+.uns-btn__content--cloned span {
+    white-space: nowrap;
+}
+
+.uns-btn__icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    transition: all .8s cubic-bezier(.73,.29,0,1);
+}
+
+.uns-btn__content--cloned .uns-btn__icon {
+  color: #fff;
+  transform: translateX(-1.8rem);
+}
+
+.uns-btn:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    background: #fff;
+    transition: all .5s,background .5s .3s;
+}
+
+.uns-btn:hover span:last-child {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+}
+
+.uns-btn:hover>span:first-child {
+    transform: translateY(250%);
+    opacity: 0;
+}
+
+.uns-btn:hover::before {
+  height: 100%;
+  bottom: 0;
+  top: initial;
+}
+
+.uns-btn:hover .uns-btn__icon {
+  transform: translateX(1.8rem);
+}
+
+.uns-btn:hover .uns-btn__content--cloned .uns-btn__icon {
+  transform: translateX(0);
+}
