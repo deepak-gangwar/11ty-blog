@@ -11,15 +11,17 @@ the new template, which helps avoid unnecessary repetition of
 basic site structures. 
 #}
 
-<article class="page-layout">
+{# <article class="page-layout">
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <div class="content mt-5">
-          {# <h1>{{ title }}</h1> #}
+          <h1>{{ title }}</h1>
           {{ content | safe }}
         </div>
       </div>
     </div>
   </div>
-</article>
+</article> #}
+
+{{ content | safe }}
