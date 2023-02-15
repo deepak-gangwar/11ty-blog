@@ -32,8 +32,11 @@ main {
 
 
 p.para {
-    font-size: 21px;
-    line-height: 165%;
+    /* font-size: 21px; */
+    /* line-height: 165%; */
+    font-size: var(--font-size-base);
+    line-height: var(--leading-looser);
+    
     margin-right: auto;
     margin-left: auto;
     margin-top: 24px;
@@ -42,7 +45,8 @@ p.para {
 
 @media screen and (max-width: 63.99875em) {
 	p.para {
-    	font-size: 20px;
-    	line-height: 150%;
+    	/* font-size: 20px; */
+    	/* line-height: 150%; */
+        line-height: var(--leading-looser);
 	}
 }

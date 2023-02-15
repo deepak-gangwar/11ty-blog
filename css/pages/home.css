@@ -53,6 +53,12 @@ hr {
     margin-right: 0;
 }
 
+.section {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-lg);
+    font-weight: normal;
+}
+
 @media screen and (max-width: 780px) {
     h2.section {
         padding-top: 50px;
@@ -108,10 +114,15 @@ hr {
 
 @media screen and (max-width: 780px) {
 	.sc-01__column-1 {
-		padding: 0 54px;
+		/* padding: 0 54px; */
+        padding: 0;
     	border-right: 0;
     	padding-bottom: 0;
 	}
+
+    .sc-01__column-2 {
+        padding-left: 0;
+    }
 }
 
 @media screen and (max-width: 780px) {
