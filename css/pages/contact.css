@@ -1,9 +1,9 @@
 /* Contact Page styles */
 .contact__wrapper {
-    padding: 0 17vw;
-    padding-top: var(--space-xl-2xl);
-    height: fit-content;
+    margin: 0 17vw;
+    margin-top: var(--space-xl-2xl);
     margin-bottom: var(--space-xl);
+    height: fit-content;
 }
 
 .contact__subtitle {
