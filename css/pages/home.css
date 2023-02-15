@@ -30,7 +30,8 @@
 }
 
 .hero__title:nth-child(2) {
-    margin-top: -16px;
+    /* margin-top: -16px; */
+    transform: translateY(-16px);
 }
 
 
@@ -50,6 +51,12 @@ hr {
     border-bottom: 0.5px solid !important;
     color: #EDEADE;
     margin-right: 0;
+}
+
+@media screen and (max-width: 780px) {
+    h2.section {
+        padding-top: 50px;
+    }
 }
 
 .sc-01 {

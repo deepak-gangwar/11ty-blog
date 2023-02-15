@@ -42,71 +42,58 @@ btnHref: /archives
   {% endfor %}
 </section> #}
 
-<section class="postlist mt-3 pt-3">
-  <div class="container">
-    <h2 class="title has-text-centered mt-3 mb-6">Recent posts</h2>
-    <div class="columns">
-      
-      {# The for loop construct in the above snippet is from the Nunjucks 
-         templating language, and its one of the ways to iterate over a 
-         collection in Eleventy. #}
-         
-      {% for post in collections.post | reverse %}
-        {% if loop.index0 < 3 %}
-          <div class="column">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  {{ post.data.title }}
-                </p>
-              </header>
-              <div class="card-content">
-                <div class="content">
-                  {{ post.data.description }}
-                </div>
-              </div>
-              <footer class="card-footer">
-                <a href="{{ post.url }}" class="button is-fullwidth is-link card-footer-item">Read article</a>
-              </footer>
-            </div>
-          </div>
-          {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
 
+
+{# Homepage Section 1 #}
 
 <section class="sc-01">
   <div class="sc-01__container">
 
     {# Column 1 #}
     <div class="sc-01__column-1 sc-01__column">
-      <h2 class="section">Hi, I'm James Clear</h2>
+      <h2 class="section">Hi, I'm Deepak Gangwar</h2>
       <p class="para">
-        I’m the author of the #1 New York Times bestseller, Atomic Habits, which has sold more than 10 million copies worldwide. My work has been featured in places like Time magazine, the New York Times, the Wall Street Journal and on CBS This Morning. Click here to learn more about me and my work.
+        {# I caught fire making websites. #}
+        I seek to create performant websites with great design.
       </p>
       <p class="para">
-        In addition to writing, I am a regular speaker at Fortune 500 companies. Previous clients include Capital One, Cisco, General Electric, Honda, Intel, LinkedIn, Lululemon, McKinsey & Company, Merrill Lynch and many more. Click here to learn more and submit a speaking request.
+        I love drawing and used to draw cartoons, which I thought I’d do later in life. But when I was 14 years old, my friend made a website and hyperlinked an image to another page. That was it—a point of no return. I knew I had to pursue front-end development. It is the perfect equilibrium for my need for creativity and mental stimulation.
+        {# I went on to take one of the most challenging exams in India (JEE) to get into a top-tier university where I pursued Computer Science Engineering. #}
+        {# I’m the author of the #1 New York Times bestseller, Atomic Habits, which has sold more than 10 million copies worldwide. My work has been featured in places like Time magazine, the New York Times, the Wall Street Journal and on CBS This Morning. Click here to learn more about me and my work. #}
+      </p>
+      <p class="para">
+        I seek to create websites for people (individuals and businesses worldwide). I love my work. I do it until my fingers bleed or my eyes are ready to fall out of my head. Even when no one is listening or watching, every project is an impressive feat, showcasing my skill and courage because I, as a creator, am happy. Perhaps even ecstatic.
+        {# In addition to writing, I am a regular speaker at Fortune 500 companies. Previous clients include Capital One, Cisco, General Electric, Honda, Intel, LinkedIn, Lululemon, McKinsey & Company, Merrill Lynch and many more. Click here to learn more and submit a speaking request. #}
       </p>
     </div>
 
     {# Column 2 #}
     <div class="sc-01__column-2 sc-01__column">
       <div class="sc-01__articles">
-        <h4>Read a popular article</h4>
-        <p class="para"><a class="underline" href="https://jamesclear.com/why-facts-dont-change-minds">Why Facts Don’t Change Our Minds</a></p>
+        {# If you later decide to add a heading to homepage, make it an h3 and do these 4 h3s -> h4 #}
+        <h3>Read a recent article</h3>
+
+        {# Bringing in 3 most recent posts #}
+        {% for post in collections.post | reverse %}
+          {% if loop.index0 < 3 %}
+            <p class="para">
+              <a class="underline" href="{{ post.url }}">{{ post.data.title }}</a>
+            </p>
+            {% endif %}
+        {% endfor %}
+        
+        {# <p class="para"><a class="underline" href="https://jamesclear.com/why-facts-dont-change-minds">Why Facts Don’t Change Our Minds</a></p>
         <p class="para"><a class="underline" href="https://jamesclear.com/why-facts-dont-change-minds">Forget About Setting Goals. Focus on This Instead.</a></p>
-        <p class="para"><a class="underline" href="https://jamesclear.com/why-facts-dont-change-minds">The Ultimate Productivity Hack is Saying No</a></p>
+        <p class="para"><a class="underline" href="https://jamesclear.com/why-facts-dont-change-minds">The Ultimate Productivity Hack is Saying No</a></p> #}
       </div>
 
       <hr class="wide-hr">
 
       <div class="sc-01__newsletter">
-        <h4>Get the latest newsletter</h4>
-        <p class="para"><a class="underline" href="https://jamesclear.com/why-facts-dont-change-minds">Why Facts Don’t Change Our Minds</a></p>
-        <p class="para"><a class="underline" href="https://jamesclear.com/why-facts-dont-change-minds">Forget About Setting Goals. Focus on This Instead.</a></p>
-        <p class="para"><a class="underline" href="https://jamesclear.com/why-facts-dont-change-minds">The Ultimate Productivity Hack is Saying No</a></p>
+        <h3>Get the latest newsletter</h3>
+        <p class="para"><a class="underline" href="/">Why Facts Don’t Change Our Minds</a></p>
+        <p class="para"><a class="underline" href="/">Forget About Setting Goals. Focus on This Instead.</a></p>
+        <p class="para"><a class="underline" href="/">The Ultimate Productivity Hack is Saying No</a></p>
       </div>
 
     </div>
