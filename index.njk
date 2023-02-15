@@ -1,17 +1,39 @@
 ---
 title: Homepage
 layout: layouts/base.njk
+btnTitle: Read the articles
+btnHref: /archives
 ---
 
-<section class="hero is-medium is-primary is-bold">
+
+{# Hero section #}
+
+{# <section class="hero is-medium is-primary is-bold">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">Hi, I'm {{ site.title }}</h1>
       <h2 class="subtitle">Designer, Writer and Frontend Freelance Developer</h2>
-      {# <h2 class="subtitle">{{ site.description }}</h2> #}
+      <h2 class="subtitle">{{ site.description }}</h2>
     </div>
   </div>
-</section>
+</section> #}
+
+<header class="hero">
+  <div class="hero__heading">
+      <h1 class="hero__title">Deepak</h1>
+      <h1 class="hero__title">Gangwar's blog</h1>
+      {# <span class="accent contact__accent"></span> #}
+  </div>
+  <span class="hero__subtitle">Mumblings of a designer x frontend developer</span>
+  <br>
+  {% include "components/uns-btn.njk" %}
+</header>
+
+
+
+
+{# Recent posts section #}
+
 {# 
 <section>
   <h1>Posts from sanity</h1>

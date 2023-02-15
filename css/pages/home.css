@@ -1,0 +1,33 @@
+.hero {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: var(--space-xl-2xl);
+    text-align: center;
+}
+
+.hero__subtitle {
+    display: inline-block;
+    font-size: var(--font-size-s);
+    font-family: var(--font-sans);
+    letter-spacing: 0.01em;
+    margin-bottom: var(--space-s);
+    color: var(--color-gray-800);
+}
+
+.hero__heading {
+    margin-bottom: var(--space-s);
+}
+
+.hero__title {
+    font-size: var(--font-size-3xl);
+    font-family: var(--font-serif);
+    line-height: var(--leading-tighter);
+    letter-spacing: -0.03em;
+    font-weight: normal;
+    max-width: 1200px;
+}
+
+.hero__title:nth-child(2) {
+    margin-top: -16px;
+}
