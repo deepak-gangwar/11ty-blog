@@ -196,13 +196,15 @@ a {
 
 /* added this weird thing to fix spacing for copyright, can remove this when all styles are done */
 main {
-    min-height: calc(73vh - 60px);
+    min-height: 80vh;
 }
+
+/* This is causing some issues, think what to do of it. */
 
 #copyright {
     padding: 20px 0;
-    /* position: absolute; */
-    position: relative;
+    position: absolute;
+    /* position: relative; */
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -280,6 +282,7 @@ main {
 /* Unseen.co button component styles */
 
 .uns-btn__container {
+    display: inline-block;
     width: fit-content;
 }
 
