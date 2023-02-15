@@ -28,5 +28,21 @@ main {
     text-align: center;
     /* width: max-content; */
     width: 100%;
+}
 
+
+p.para {
+    font-size: 21px;
+    line-height: 165%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 63.99875em) {
+	p.para {
+    	font-size: 20px;
+    	line-height: 150%;
+	}
 }
