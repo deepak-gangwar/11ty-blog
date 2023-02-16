@@ -54,6 +54,11 @@
     color: var(--color-bright-crimson);
 }
 
+.underline__link-light:hover span {
+    transform: translate3d(0px, -2px, 0px);
+    color: var(--color-salmon);
+}
+
 .underline__span {
     /* color: var(--color-gray-800); */
 }
