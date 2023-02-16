@@ -1,6 +1,6 @@
 .about__wrapper {
     margin: 0 17vw;
-    margin-top: var(--space-xl-2xl);
+    margin-top: var(--space-2xl-3xl);
     margin-bottom: var(--space-xl);
     height: fit-content;
 }

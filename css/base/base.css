@@ -48,3 +48,11 @@ p.para {
         line-height: var(--leading-looser);
 	}
 }
+
+.accent {
+    background: var(--color-gray-800);
+    display: inline-block;
+    margin-left: 30px;
+    width: 100px;
+    height: 1px;
+}
