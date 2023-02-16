@@ -1,8 +1,26 @@
 ---
 title: About Me
 layout: layouts/page.njk
+btnTitle: Find me on Twitter
+btnHref: https://twitter.com/_DeepakGangwar
 ---
 
 <!-- You can also use an HTML or Nunjucks file instead of Markdown if you prefer. -->
 
-I am Deepak Gangwar, a freelance Frontend Developer. I am a person that writes stuff.
+{# I am Deepak Gangwar, a freelance Frontend Developer. I am a person that writes stuff. #}
+
+<div class="about__wrapper">
+    <div class="about__heading">
+        <h1 class="about__title">About me</h1>
+        <span class="accent contact__accent"></span>
+    </div>
+    <span class="about__subtitle">Designer x Freelance Frontend Developer</span>
+
+    <article class="about__content">
+        <p class="para">Hi dear reader! I'm Deepak Gangwar, a frontend developer who loves to design. Welcome back to my blog. If you're new, welcome to my blog.</p>
+        <p class="para">This blog is me trying to document my journey as a developer, learning and sharing with others. Hoping to provide some value to others. I write mainly about dev stuff. But ocassioinally all things life as well.</p>
+    </article>
+
+    {# <button>Back to articles</button> #}
+    {% include "components/uns-btn.njk" %}
+</div>
