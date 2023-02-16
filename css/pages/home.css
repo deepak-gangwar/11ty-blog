@@ -5,6 +5,14 @@
     margin-bottom: var(--space-2xl);
     margin-top: var(--space-xl-2xl);
     text-align: center;
+    /* Added later on to make it larger on mobiles */
+    min-height: 50vh;
+}
+
+@media screen and (min-width: 1080px) {
+    .hero {
+        min-height: 30vh;
+    }
 }
 
 .hero__subtitle {
