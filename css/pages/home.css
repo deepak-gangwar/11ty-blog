@@ -53,20 +53,20 @@ hr {
     margin-right: 0;
 }
 
-.section {
+.sc-01 {
+    background: #fff;
+}
+
+.sc-01__heading {
     font-family: var(--font-serif);
     font-size: var(--font-size-lg);
     font-weight: normal;
 }
 
 @media screen and (max-width: 780px) {
-    h2.section {
-        padding-top: 50px;
+    .sc-01__heading {
+        padding-top: 100px;
     }
-}
-
-.sc-01 {
-    background: #fff;
 }
 
 .sc-01__container {

@@ -4,7 +4,8 @@
   {% include "components/head.njk" %}
 </head>
 <body>
-  <header>{% include "components/nav.njk" %}</header>
+  {# <header>{% include "components/nav.njk" %}</header> #}
+  {% include "components/nav.njk" %}
   <main>
     {{ content | safe }}
   </main>
