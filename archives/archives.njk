@@ -6,6 +6,8 @@ pagination:
   size: 3
   alias: posts
   reverse: true
+btnTitle: Read more articles on JavaScript
+btnHref: '/'
 ---
 
 {# Setting variables to be used later #}
@@ -14,17 +16,27 @@ pagination:
 {% set currentPage = 1 %}
 {% set postsPerPage = 3 %}
 
+<div class="archives__wrapper">
+    <div class="archives__heading">
+        <h1 class="archives__title">All Articles</h1>
+        <span class="accent contact__accent"></span>
+    </div>
+    <span class="archives__subtitle">Browse articles by topic</span>
+
+    {# All articles list #}
+    <ul class="articles__list">
+        <ul>
+            <li><h4><a href="" class="highlighter">JavaScript</a></h4></li>
+            <li><a href="" class="highlighter">Strings and arrays explained as simple as possible</a></li>
+            <li><a href="" class="highlighter">Building a personal static site with 11ty</a></li>
+            <li><a href="" class="highlighter">Creating custom cursor that follows pointer</a></li>
+            <li><a href="" class="highlighter">Making of an infinite slider</a></li>
+            {# <li>{% include "components/uns-btn.njk" %}</li> #}
+        </ul>
+    </ul>
+</div>
 
 
-<h2>All articles</h2>
-<p>
-    This page shares my best articles to read on topics 
-    like health, happiness, creativity, productivity and 
-    obviously web development. The central question that 
-    drives my work is, “How can we live better?” To answer 
-    that question, I like to write about science-based ways 
-    to solve practical problems.
-</p>
 
 {# HOW POSTS WILL LOOK IN ARCHIVES PAGE #}
 <ul>
