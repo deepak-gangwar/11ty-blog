@@ -1,10 +1,10 @@
 /* Highilghter Underline effect for anchors */
 
-.underline {
+.highlighter {
     background-color: transparent
 }
 
-.underline .aricle-llink {
+.highlighter .aricle-llink {
     text-decoration: none;
     color: inherit;
     margin-top: 64px;
@@ -13,16 +13,16 @@
     border-bottom: 0
 }
 
-.underline .aricle-llink h2 {
+.highlighter .aricle-llink h2 {
     margin-bottom: 24px
 }
 
-.underline .nostyle {
+.highlighter .nostyle {
     text-decoration: none;
     color: inherit
 }
 
-.underline {
+.highlighter {
     color: inherit;
     text-decoration: none;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#FEF5DF), to(#FEF5DF));
@@ -38,7 +38,7 @@
     transition: all 0.3s
 }
 
-.underline:hover {
+.highlighter:hover {
     background-size: 100% 88%;
     cursor: pointer;
     border-bottom: 2px solid #f8cd5f;
