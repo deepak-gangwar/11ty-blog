@@ -5,7 +5,6 @@ btnTitle: Read the articles
 btnHref: /archives
 ---
 
-
 {# Hero section #}
 
 {# <section class="hero is-medium is-primary is-bold">
@@ -20,17 +19,14 @@ btnHref: /archives
 
 <header class="hero">
   <div class="hero__heading">
-      <h1 class="hero__title">Deepak</h1>
-      <h1 class="hero__title">Gangwar's blog</h1>
-      {# <span class="accent contact__accent"></span> #}
+    <h1 class="hero__title">Deepak</h1>
+    <h1 class="hero__title">Gangwar's blog</h1>
+    {# <span class="accent contact__accent"></span> #}
   </div>
   <span class="hero__subtitle">Mumblings of a designer x frontend developer</span>
   <br>
   {% include "components/uns-btn.njk" %}
 </header>
-
-
-
 
 {# Recent posts section #}
 
@@ -41,8 +37,6 @@ btnHref: /archives
   <h5>{{ post.title }}</h5>
   {% endfor %}
 </section> #}
-
-
 
 {# Homepage Section 1 #}
 
@@ -58,13 +52,10 @@ btnHref: /archives
       </p> #}
       <p class="para">
         I love drawing and used to draw cartoons, which I thought I’d do later in life. But when I was 14 years old, my friend made a website and hyperlinked an image to another page. That was it—a point of no return. I knew I had to pursue front-end development. It is the perfect equilibrium for my need for creativity and mental stimulation.
-        {# I went on to take one of the most challenging exams in India (JEE) to get into a top-tier university where I pursued Computer Science Engineering. #}
-        {# I’m the author of the #1 New York Times bestseller, Atomic Habits, which has sold more than 10 million copies worldwide. My work has been featured in places like Time magazine, the New York Times, the Wall Street Journal and on CBS This Morning. Click here to learn more about me and my work. #}
-      </p>
+        {# I went on to take one of the most challenging exams in India (JEE) to get into a top-tier university where I pursued Computer Science Engineering. #}{# I’m the author of the #1 New York Times bestseller, Atomic Habits, which has sold more than 10 million copies worldwide. My work has been featured in places like Time magazine, the New York Times, the Wall Street Journal and on CBS This Morning. Click here to learn more about me and my work. #}</p>
       <p class="para">
         I seek to create websites for people. I love my work. I do it until my fingers bleed or my eyes are ready to fall out of my head. Even when no one is listening or watching, every project is an impressive feat, because I, as a creator, am happy. Perhaps even ecstatic.
-        {# In addition to writing, I am a regular speaker at Fortune 500 companies. Previous clients include Capital One, Cisco, General Electric, Honda, Intel, LinkedIn, Lululemon, McKinsey & Company, Merrill Lynch and many more. Click here to learn more and submit a speaking request. #}
-      </p>
+        {# In addition to writing, I am a regular speaker at Fortune 500 companies. Previous clients include Capital One, Cisco, General Electric, Honda, Intel, LinkedIn, Lululemon, McKinsey & Company, Merrill Lynch and many more. Click here to learn more and submit a speaking request. #}</p>
     </div>
 
     {# Column 2 #}
@@ -79,9 +70,9 @@ btnHref: /archives
             <p class="para">
               <a class="highlighter" href="{{ post.url }}">{{ post.data.title }}</a>
             </p>
-            {% endif %}
+          {% endif %}
         {% endfor %}
-        
+
         {# <p class="para"><a class="highlighter" href="https://jamesclear.com/why-facts-dont-change-minds">Why Facts Don’t Change Our Minds</a></p>
         <p class="para"><a class="highlighter" href="https://jamesclear.com/why-facts-dont-change-minds">Forget About Setting Goals. Focus on This Instead.</a></p>
         <p class="para"><a class="highlighter" href="https://jamesclear.com/why-facts-dont-change-minds">The Ultimate Productivity Hack is Saying No</a></p> #}
@@ -91,9 +82,15 @@ btnHref: /archives
 
       <div class="sc-01__newsletter">
         <h3>Get the latest newsletter</h3>
-        <p class="para"><a class="highlighter" href="/">Why Facts Don’t Change Our Minds</a></p>
-        <p class="para"><a class="highlighter" href="/">Forget About Setting Goals. Focus on This Instead.</a></p>
-        <p class="para"><a class="highlighter" href="/">The Ultimate Productivity Hack is Saying No</a></p>
+        <p class="para">
+          <a class="highlighter" href="/">Why Facts Don’t Change Our Minds</a>
+        </p>
+        <p class="para">
+          <a class="highlighter" href="/">Forget About Setting Goals. Focus on This Instead.</a>
+        </p>
+        <p class="para">
+          <a class="highlighter" href="/">The Ultimate Productivity Hack is Saying No</a>
+        </p>
       </div>
 
     </div>
