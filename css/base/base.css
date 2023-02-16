@@ -10,25 +10,23 @@ a {
     text-decoration: none;
 }
 
-/* added this weird thing to fix spacing for copyright, can remove this when all styles are done */
 main {
     min-height: 80vh;
 }
 
-/* This is causing some issues, think what to do of it. */
+/* These styles were needed when the bottom copyright was the <small> tag. */
+/* Now replaced by footer */
 
-#copyright {
+/* #copyright {
     padding: 20px 0;
     position: absolute;
-    /* position: relative; */
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
     text-align: center;
-    /* width: max-content; */
     width: 100%;
-}
+} */
 
 
 p.para {
