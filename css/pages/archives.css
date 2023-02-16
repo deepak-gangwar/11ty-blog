@@ -16,7 +16,7 @@
     font-family: var(--font-sans);
     letter-spacing: 0.01em;
     /* margin-bottom: var(--space-3xs); */
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-xl);
     margin-left: var(--space-3xs);
     color: var(--color-gray-800);
 }
@@ -37,4 +37,109 @@
     margin-bottom: var(--space-2xs);
     max-width: 1200px;
     display: inline-block;
+}
+
+
+.articles__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /* -webkit-box-pack: justify; */
+    /* -webkit-justify-content: space-between; */
+    /* -ms-flex-pack: justify; */
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    margin-bottom: 87px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1200px) {
+    .articles__list {
+        /* -webkit-justify-content:space-around; */
+        /* -ms-flex-pack: distribute; */
+        /* justify-content: space-around; */
+    }
+}
+
+.articles__list:last-child {
+    margin-bottom: 0;
+}
+
+.articles__list ul {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 calc(69% - 68px);
+    -ms-flex: 0 1 calc(69% - 68px);
+    flex: 0 1 calc(69% - 68px);
+    margin: 32px 0 32px;
+}
+
+@media screen and (min-width: 1920px) {
+    .articles__list ul {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 calc(50% - 68px);
+        -ms-flex: 0 1 calc(50% - 68px);
+        flex: 0 1 calc(50% - 68px);
+        margin-top:0
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .articles__list ul {
+        margin-top:0
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .articles__list ul {
+        -webkit-box-flex:0;
+        -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+        max-width: unset
+    }
+
+    .articles__list ul h4 {
+        max-width: unset
+    }
+}
+
+.articles__list ul li {
+    font-size: 20px;
+    line-height: 165%;
+    border-bottom: 1px solid #EDEADE;
+    padding: 12px 0;
+    margin-bottom: 0
+}
+
+.articles__list ul li::before {
+    display: none
+}
+
+.articles__list ul li:first-child {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 150%
+}
+
+.articles__list ul li:last-child {
+    border-bottom: 0;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 170%;
+    text-transform: uppercase;
+    padding-top: 23px;
+    font-family: var(--font-sans), sans-serif;
+    letter-spacing: 1px;
+}
+
+.articles__list ul li:last-child svg {
+    margin-left: 16px
+}
+
+.articles__list ul a {
+    text-decoration: none;
+    color: #111111
 }
