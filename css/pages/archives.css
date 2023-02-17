@@ -143,3 +143,11 @@
     text-decoration: none;
     color: #111111
 }
+
+.articles__list a {
+    border-bottom-color: #fff;
+}
+
+a.articles__go {
+    padding: 8px 0 2px 0;
+}
