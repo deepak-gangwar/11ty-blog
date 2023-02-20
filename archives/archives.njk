@@ -10,12 +10,6 @@ btnTitle: Read more articles on JavaScript
 btnHref: '/'
 ---
 
-{# Setting variables to be used later #}
-
-{% set allPosts = collections.post | reverse %}
-{% set currentPage = 1 %}
-{% set postsPerPage = 3 %}
-
 <div class="archives__wrapper">
     <div class="archives__heading">
         <h1 class="archives__title">All Articles</h1>
@@ -61,6 +55,16 @@ btnHref: '/'
 </div>
 
 
+{# Now the following section is irrelevant to this page #}
+
+{# This is how I implemented the pagination for archives page #}
+{# It shows posts in reverse order, 3 on one page, with pagination #}
+
+{# Setting variables to be used later #}
+
+{% set allPosts = collections.post | reverse %}
+{% set currentPage = 1 %}
+{% set postsPerPage = 3 %}
 
 {# HOW POSTS WILL LOOK IN ARCHIVES PAGE #}
 <ul>

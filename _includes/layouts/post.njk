@@ -24,45 +24,62 @@ new layout for each one.
 {% if readingTime < 1 %}{% set readingTime = 1 %}{% endif %}
 
 
-<section class="page-layout">
+<div class="post__wrapper">
+  <div class="post__heading">
+    {# Updated title to heading, this way you can have main heading other than page title #}
+    <h1 class="post__title">{{ heading }}</h1>
+    {# <span class="accent contact__accent"></span> #}
+  </div>
+
+  {# Article Metadata #}
+  <div class="metadata__container">
+    {# <span class="post__subtitle">Browse articles by topic</span> #}
+    <p class="post__metadata">Written by {{ author }}</p>
+    <span>|</span>
+    
+    {# --------------- Date ------------------ #}
+    <p class="post__metadata">
+      Published on: <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
+    </p>
+    <span>|</span>
+    
+    {# --------------- Reading time ---------- #}
+    <p class="post__metadata">
+      {# Different styles of reading time #}
+      {# {{ wordCount | numCommas }} words • Reading time: {{ readingTime }} minute{% if readingTime > 1 %}s{% endif %} #}
+      {# Reading time: {{ readingTime }} minute{% if readingTime > 1 %}s{% endif %} #}
+      {{ readingTime }} min read
+    </p>
+  </div>
+
+  {# --------------- Tags ------------------ #}
+  <div class="post__tags">
+    <ul>
+      {% for tag in tags %}
+        <li>
+          <a href="/categories/{{ tag | slugify }}">{{tag}}</a>
+          {# <a href="/categories/{{ tag | slugify }}">{{tag}}</a> #}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {# --------------- Content --------------- #}
+  <article class="post__content">
+    {{ content | safe }}
+  </article>
+</div>
+
+{# <section class="page-layout">
   <div class="container">
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <article class="content mt-5">
-          {# Updated title to heading, this way you can have main heading other than page title #}
-          <h1 class="title">{{ heading }}</h1>
-          <p>Written by {{ author }}</p>
-          
-          {# --------------- Date ------------------ #}
-          <p class="subtitle is-6">
-            Published on: <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
-          </p>
-          
-          {# --------------- Reading time ---------- #}
-          <p>
-            {# Different styles of reading time #}
-            {# {{ wordCount | numCommas }} words • Reading time: {{ readingTime }} minute{% if readingTime > 1 %}s{% endif %} #}
-            {# Reading time: {{ readingTime }} minute{% if readingTime > 1 %}s{% endif %} #}
-            {{ readingTime }} min read
-          </p>
-
-          {# --------------- Tags ------------------ #}
-          <ul>
-            {% for tag in tags %}
-              <li>
-                <a href="/categories/{{ tag | slugify }}">{{tag}}</a>
-                {# <a href="/categories/{{ tag | slugify }}">{{tag}}</a> #}
-              </li>
-            {% endfor %}
-          </ul>
-
-          {# --------------- Content --------------- #}
-          {{ content | safe }}
         </article>
       </div>
     </div>
   </div>
-</section>
+</section> #}
 
 
 {# -------------- Social Sharing -------------- #}
