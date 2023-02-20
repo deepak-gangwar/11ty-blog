@@ -55,3 +55,35 @@
         display: none;
     }
 }
+
+.tags__list {
+    display: flex;
+    text-transform: capitalize;
+    gap: 0.4rem;
+    margin-bottom: var(--space-xl);
+}
+
+.tag {
+    /* color: #233043;
+    border: 1px solid #233043; */
+    color: var(--color-gray-600);
+    border: 1px solid var(--color-gray-400);
+    border-radius: 8px;
+    padding: 2px 12px;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: var(--color-cute-purple);
+    background: var(--color-salmon);
+    color: var(--color-gray-800);
+    border-color: transparent;
+}
+
+.post__content p {
+    color: var(--color-gray-800);
+    font-size: var(--font-size-base);
+    line-height: var(--leading-looser);
+    margin-bottom: var(--space-m);
+    max-width: 45ch;
+}

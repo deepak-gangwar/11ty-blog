@@ -54,9 +54,9 @@ new layout for each one.
 
   {# --------------- Tags ------------------ #}
   <div class="post__tags">
-    <ul>
+    <ul class="tags__list">
       {% for tag in tags %}
-        <li>
+        <li class="tag">
           <a href="/categories/{{ tag | slugify }}">{{tag}}</a>
           {# <a href="/categories/{{ tag | slugify }}">{{tag}}</a> #}
         </li>
@@ -69,17 +69,6 @@ new layout for each one.
     {{ content | safe }}
   </article>
 </div>
-
-{# <section class="page-layout">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8 is-offset-2">
-        <article class="content mt-5">
-        </article>
-      </div>
-    </div>
-  </div>
-</section> #}
 
 
 {# -------------- Social Sharing -------------- #}
