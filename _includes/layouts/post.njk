@@ -23,17 +23,24 @@ new layout for each one.
 {% set readingTime = (wordCount/readingRate) | round %}
 {% if readingTime < 1 %}{% set readingTime = 1 %}{% endif %}
 
-
+{# Current style includes a title with max-width and an accent, plus the subtitle #}
+{# Another style that I felt good about was without accent and max-width title, and no subtitle, clean layout #}
 <div class="post__wrapper">
   <div class="post__heading">
     {# Updated title to heading, this way you can have main heading other than page title #}
-    <h1 class="post__title">{{ heading }}</h1>
-    {# <span class="accent contact__accent"></span> #}
+    <h1 class="post__title">
+      {{ heading }}
+      {# Can remove accent if you don't want it #}
+      <span class="accent contact__accent"></span>
+    </h1>
   </div>
+  {# Added this later on. Thought it would be better to describe the post in more wordly subtitle and keep title short. #}
+  <h2 class="post__subtitle">{{ subtitle }}</h2>
+
+  <hr class="wide-hr">
 
   {# Article Metadata #}
   <div class="metadata__container">
-    {# <span class="post__subtitle">Browse articles by topic</span> #}
     <p class="post__metadata">Written by {{ author }}</p>
     <span>|</span>
     

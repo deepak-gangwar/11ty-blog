@@ -5,6 +5,11 @@ body {
     background-color: var(--color-primary);
 }
 
+::selection {
+    background: var(--color-cute-purple);
+    /* color: var(--color-salmon); */
+}
+
 a {
     color: inherit;
     text-decoration: none;
