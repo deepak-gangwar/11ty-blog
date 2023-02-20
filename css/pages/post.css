@@ -67,6 +67,7 @@
     /* color: #233043;
     border: 1px solid #233043; */
     color: var(--color-gray-600);
+    color: var(--color-bright-crimson);
     border: 1px solid var(--color-gray-400);
     border-radius: 8px;
     padding: 2px 12px;
