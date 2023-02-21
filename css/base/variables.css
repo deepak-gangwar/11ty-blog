@@ -15,6 +15,7 @@
 
     /* Colors */
     --color-light-cream: #0f0f0f;
+    --color-light-cream: #fcfbf7;
     --color-cream: #F6F5F1;
     --color-tinted-cream: #E6E3E1;
     --color-colorac--color-accent: #353534;
@@ -140,8 +141,8 @@
 
 /* Global variables */
 :root {
-    --color-primary: #f8f3f7;
-    /* --color-primary: #f9f8f4; */
+    /* --color-primary: #f8f3f7; */
+    --color-primary: #f9f8f4;
     --color-accent: #1c1c1c;
     --color-cute-purple: #CDBADE;
 }

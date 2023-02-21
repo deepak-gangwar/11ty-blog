@@ -26,12 +26,15 @@ new layout for each one.
 {# Current style includes a title with max-width and an accent, plus the subtitle #}
 {# Another style that I felt good about was without accent and max-width title, and no subtitle, clean layout #}
 <div class="post__wrapper">
+
+  {# Heading #}
   <div class="post__heading">
     {# Updated title to heading, this way you can have main heading other than page title #}
     <h1 class="post__title">
       {{ heading }}
       {# Can remove accent if you don't want it #}
-      <span class="accent contact__accent"></span>
+      {# Accent is causing issues on the title which are not long enough but accent is coming on to new line #}
+      {# <span class="accent contact__accent"></span> #}
     </h1>
   </div>
   {# Added this later on. Thought it would be better to describe the post in more wordly subtitle and keep title short. #}
@@ -87,20 +90,20 @@ new layout for each one.
 
 <div class="share">
   <p class="share__title">
-    Like what you're reading. Share &nbsp;&mdash;&nbsp;
+    Like what you're reading. Share it with your friends 👋 &nbsp;&mdash;&nbsp;
   </p>
   <ul class="share__list">
     <li class="share__item">
-      <a href="https://www.facebook.com/sharer.php?u={{ pageUrl }}" class="share__link" target="_blank" rel="noopener" aria-label="Share on Facebook">Facebook</a>
+      <a href="https://www.facebook.com/sharer.php?u={{ pageUrl }}" class="share__link underline__link" target="_blank" rel="noopener" aria-label="Share on Facebook"><span class="underline__span">Facebook</span></a>
     </li>
     <li class="share__item">
-      <a href="https://twitter.com/intent/tweet?url={{ pageUrl }}&text={{ stitle }}" class="share__link" target="_blank" rel="noopener" aria-label="Share on Twitter">Twitter</a>
+      <a href="https://twitter.com/intent/tweet?url={{ pageUrl }}&text={{ stitle }}" class="share__link underline__link" target="_blank" rel="noopener" aria-label="Share on Twitter"><span class="underline__span">Twitter</span></a>
     </li>
     <li class="share__item">
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ pageUrl }}" class="share__link" target="_blank" rel="noopener" aria-label="Share on LinkedIn">LinkedIn</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ pageUrl }}" class="share__link underline__link" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><span class="underline__span">LinkedIn</span></a>
     </li>
     <li class="share__item">
-      <a href="https://reddit.com/submit?url={{ pageUrl }}&title={{ stitle }}" class="share__link" target="_blank" rel="noopener" aria-label="Share on Reddit">Reddit</a>
+      <a href="https://reddit.com/submit?url={{ pageUrl }}&title={{ stitle }}" class="share__link underline__link" target="_blank" rel="noopener" aria-label="Share on Reddit"><span class="underline__span">Reddit</span></a>
     </li>
   </ul>
 </div>
