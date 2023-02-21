@@ -82,28 +82,4 @@ new layout for each one.
 
 
 {# -------------- Social Sharing -------------- #}
-
-{% set pageUrl = site.url + page.url %}
-{# {% assign stitle = heading | escape %} #}
-{% set stitle = "Give this a read 👇 " %}
-
-
-<div class="share">
-  <p class="share__title">
-    Like what you're reading. Share it with your friends 👋 &nbsp;&mdash;&nbsp;
-  </p>
-  <ul class="share__list">
-    <li class="share__item">
-      <a href="https://www.facebook.com/sharer.php?u={{ pageUrl }}" class="share__link underline__link" target="_blank" rel="noopener" aria-label="Share on Facebook"><span class="underline__span">Facebook</span></a>
-    </li>
-    <li class="share__item">
-      <a href="https://twitter.com/intent/tweet?url={{ pageUrl }}&text={{ stitle }}" class="share__link underline__link" target="_blank" rel="noopener" aria-label="Share on Twitter"><span class="underline__span">Twitter</span></a>
-    </li>
-    <li class="share__item">
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ pageUrl }}" class="share__link underline__link" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><span class="underline__span">LinkedIn</span></a>
-    </li>
-    <li class="share__item">
-      <a href="https://reddit.com/submit?url={{ pageUrl }}&title={{ stitle }}" class="share__link underline__link" target="_blank" rel="noopener" aria-label="Share on Reddit"><span class="underline__span">Reddit</span></a>
-    </li>
-  </ul>
-</div>
+{% include "components/postShare.njk" %}

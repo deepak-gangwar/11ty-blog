@@ -111,35 +111,3 @@
 .post__wrapper hr {
     color: var(--color-gray-400);
 }
-
-
-.share {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--color-tinted-cream);
-    padding: var(--space-s);
-    margin: 0 var(--space-2xs) var(--space-2xs) 0;
-    border-radius: var(--border-radius-base);
-    box-shadow: var(--box-shadow-sm);
-    background: var(--color-light-cream);
-    transition: all 0.3s ease-in-out 0s;
-    color: var(--color-gray-800);
-    cursor: pointer;
-    margin: 0 17vw;
-    margin-top: var(--space-2xl-3xl);
-    margin-bottom: var(--space-xl);
-    padding-bottom: var(--space-l);
-    padding-top: var(--space-xl);
-    text-align: center;
-    /* height: fit-content; */
-}
-
-.share__list {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.share__item {}
