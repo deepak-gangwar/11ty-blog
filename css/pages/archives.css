@@ -121,7 +121,8 @@
 .articles__list ul li:first-child {
     font-weight: bold;
     font-size: 21px;
-    line-height: 150%
+    line-height: 150%;
+    text-transform: capitalize;
 }
 
 .articles__list ul li:last-child {

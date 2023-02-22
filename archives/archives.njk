@@ -21,16 +21,23 @@ btnHref: '/'
     </div>
     <span class="archives__subtitle">Browse articles by topic</span>
 
+    
     {# All articles list #}
+
     {# Maybe instead of hardcoding these lists here, you can create these lists in Sanity #}
     {# Or maybe instead of that, you can create some function which accepts the tags and creates lists from them #}
     {# And remove the pagination concept to pages like "all articles tagged with javascript" #}
+    {# NOTE: IMPLEMENTED ABOVE SUCCESSFULLY #}
+    
     <ul class="articles__list">
+
+        {# Lists of articles falling into a certain category/tag #}
         {% for list in lists %}
             <ul>
+                {# Heading i.e. tagged with #}
                 <li><h4><a href="/categories/{{ list | slugify }}" class="highlighter">{{ list }}</a></h4></li>
 
-
+                {# Three posts tagged with this current tag #}
                 {% for post in collections[list] %}
                     {% if (loop.index <= itemsPerList) %}
                         <li class="">
@@ -39,6 +46,7 @@ btnHref: '/'
                     {% endif %}
                 {% endfor %}
 
+                {# Link to tag.njk page for reading all posts tagged with current tag #}
                 <li><a href="/categories/{{ list | slugify }}" class="highlighter articles__go">
                     Read all articles on {{ list }}
                     <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">

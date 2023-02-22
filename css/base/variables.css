@@ -141,8 +141,8 @@
 
 /* Global variables */
 :root {
-    /* --color-primary: #f8f3f7; */
-    --color-primary: #f9f8f4;
+    --color-primary: #f8f3f7;
+    /* --color-primary: #f9f8f4; */
     --color-accent: #1c1c1c;
     --color-cute-purple: #CDBADE;
 }
