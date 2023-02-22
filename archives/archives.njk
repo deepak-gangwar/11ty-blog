@@ -10,6 +10,10 @@ btnTitle: Read more articles on JavaScript
 btnHref: '/'
 ---
 
+{# Setting variables to be used later #}
+{% set itemsPerList = 3 %}
+
+
 <div class="archives__wrapper">
     <div class="archives__heading">
         <h1 class="archives__title">All Articles</h1>
@@ -22,83 +26,32 @@ btnHref: '/'
     {# Or maybe instead of that, you can create some function which accepts the tags and creates lists from them #}
     {# And remove the pagination concept to pages like "all articles tagged with javascript" #}
     <ul class="articles__list">
-        <ul>
-            <li><h4><a href="" class="highlighter">JavaScript</a></h4></li>
-            <li><a href="" class="highlighter">Strings and arrays explained as simple as possible</a></li>
-            <li><a href="" class="highlighter">Building a personal static site with 11ty</a></li>
-            <li><a href="" class="highlighter">Creating custom cursor that follows pointer</a></li>
-            <li><a href="" class="highlighter">Making of an infinite slider</a></li>
-            <li><a href="" class="highlighter articles__go">
-                Read all articles on JavaScript
-                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.71875 0.125L9.46875 0.34375C9.34375 0.5 9.34375 0.71875 9.46875 0.875L12.0938 3.46875H0.375C0.15625 3.46875 0 3.65625 0 3.84375V4.15625C0 4.375 0.15625 4.53125 0.375 4.53125H12.0938L9.46875 7.15625C9.34375 7.3125 9.34375 7.53125 9.46875 7.6875L9.71875 7.90625C9.84375 8.0625 10.0938 8.0625 10.25 7.90625L13.875 4.28125C14.0312 4.125 14.0312 3.90625 13.875 3.75L10.25 0.125C10.0938 -0.03125 9.84375 -0.03125 9.71875 0.125Z" fill="#111111"></path>
-                </svg>
-            </a></li>
-            {# <li>{% include "components/uns-btn.njk" %}</li> #}
-        </ul>
+        {% for list in lists %}
+            <ul>
+                <li><h4><a href="/categories/{{ list | slugify }}" class="highlighter">{{ list }}</a></h4></li>
 
-        <ul>
-            <li><h4><a href="" class="highlighter">11ty</a></h4></li>
-            <li><a href="" class="highlighter">Building a blog with eleventy</a></li>
-            <li><a href="" class="highlighter">Adding pagination for archives page</a></li>
-            <li><a href="" class="highlighter">Incorporating Google Analytics in your blog</a></li>
-            <li><a href="" class="highlighter">Connecting your 11ty blog with sanity</a></li>
-            <li><a href="" class="highlighter articles__go">
-                Read all articles on 11ty
-                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.71875 0.125L9.46875 0.34375C9.34375 0.5 9.34375 0.71875 9.46875 0.875L12.0938 3.46875H0.375C0.15625 3.46875 0 3.65625 0 3.84375V4.15625C0 4.375 0.15625 4.53125 0.375 4.53125H12.0938L9.46875 7.15625C9.34375 7.3125 9.34375 7.53125 9.46875 7.6875L9.71875 7.90625C9.84375 8.0625 10.0938 8.0625 10.25 7.90625L13.875 4.28125C14.0312 4.125 14.0312 3.90625 13.875 3.75L10.25 0.125C10.0938 -0.03125 9.84375 -0.03125 9.71875 0.125Z" fill="#111111"></path>
-                </svg>
-            </a></li>
-            {# <li>{% include "components/uns-btn.njk" %}</li> #}
-        </ul>
 
-        <ul>
-            <li><h4><a href="" class="highlighter">3. List three</a></h4></li>
-            <li><a href="" class="highlighter">Building a blog with eleventy</a></li>
-            <li><a href="" class="highlighter">Adding pagination for archives page</a></li>
-            <li><a href="" class="highlighter">Incorporating Google Analytics in your blog</a></li>
-            <li><a href="" class="highlighter">Connecting your 11ty blog with sanity</a></li>
-            <li><a href="" class="highlighter articles__go">
-                Read all articles on 11ty
-                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.71875 0.125L9.46875 0.34375C9.34375 0.5 9.34375 0.71875 9.46875 0.875L12.0938 3.46875H0.375C0.15625 3.46875 0 3.65625 0 3.84375V4.15625C0 4.375 0.15625 4.53125 0.375 4.53125H12.0938L9.46875 7.15625C9.34375 7.3125 9.34375 7.53125 9.46875 7.6875L9.71875 7.90625C9.84375 8.0625 10.0938 8.0625 10.25 7.90625L13.875 4.28125C14.0312 4.125 14.0312 3.90625 13.875 3.75L10.25 0.125C10.0938 -0.03125 9.84375 -0.03125 9.71875 0.125Z" fill="#111111"></path>
-                </svg>
-            </a></li>
-            {# <li>{% include "components/uns-btn.njk" %}</li> #}
-        </ul>
+                {% for post in collections[list] %}
+                    {% if (loop.index <= itemsPerList) %}
+                        <li class="">
+                            <a href="{{post.url}}" class="highlighter">{{ post.data.title }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
 
-        <ul>
-            <li><h4><a href="" class="highlighter">4. List four</a></h4></li>
-            <li><a href="" class="highlighter">Building a blog with eleventy</a></li>
-            <li><a href="" class="highlighter">Adding pagination for archives page</a></li>
-            <li><a href="" class="highlighter">Incorporating Google Analytics in your blog</a></li>
-            <li><a href="" class="highlighter">Connecting your 11ty blog with sanity</a></li>
-            <li><a href="" class="highlighter articles__go">
-                Read all articles on 11ty
-                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.71875 0.125L9.46875 0.34375C9.34375 0.5 9.34375 0.71875 9.46875 0.875L12.0938 3.46875H0.375C0.15625 3.46875 0 3.65625 0 3.84375V4.15625C0 4.375 0.15625 4.53125 0.375 4.53125H12.0938L9.46875 7.15625C9.34375 7.3125 9.34375 7.53125 9.46875 7.6875L9.71875 7.90625C9.84375 8.0625 10.0938 8.0625 10.25 7.90625L13.875 4.28125C14.0312 4.125 14.0312 3.90625 13.875 3.75L10.25 0.125C10.0938 -0.03125 9.84375 -0.03125 9.71875 0.125Z" fill="#111111"></path>
-                </svg>
-            </a></li>
-            {# <li>{% include "components/uns-btn.njk" %}</li> #}
-        </ul>
-
-        <ul>
-            <li><h4><a href="" class="highlighter">5. List five</a></h4></li>
-            <li><a href="" class="highlighter">Building a blog with eleventy</a></li>
-            <li><a href="" class="highlighter">Adding pagination for archives page</a></li>
-            <li><a href="" class="highlighter">Incorporating Google Analytics in your blog</a></li>
-            <li><a href="" class="highlighter">Connecting your 11ty blog with sanity</a></li>
-            <li><a href="" class="highlighter articles__go">
-                Read all articles on 11ty
-                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.71875 0.125L9.46875 0.34375C9.34375 0.5 9.34375 0.71875 9.46875 0.875L12.0938 3.46875H0.375C0.15625 3.46875 0 3.65625 0 3.84375V4.15625C0 4.375 0.15625 4.53125 0.375 4.53125H12.0938L9.46875 7.15625C9.34375 7.3125 9.34375 7.53125 9.46875 7.6875L9.71875 7.90625C9.84375 8.0625 10.0938 8.0625 10.25 7.90625L13.875 4.28125C14.0312 4.125 14.0312 3.90625 13.875 3.75L10.25 0.125C10.0938 -0.03125 9.84375 -0.03125 9.71875 0.125Z" fill="#111111"></path>
-                </svg>
-            </a></li>
-            {# <li>{% include "components/uns-btn.njk" %}</li> #}
-        </ul>
+                <li><a href="/categories/{{ list | slugify }}" class="highlighter articles__go">
+                    Read all articles on {{ list }}
+                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.71875 0.125L9.46875 0.34375C9.34375 0.5 9.34375 0.71875 9.46875 0.875L12.0938 3.46875H0.375C0.15625 3.46875 0 3.65625 0 3.84375V4.15625C0 4.375 0.15625 4.53125 0.375 4.53125H12.0938L9.46875 7.15625C9.34375 7.3125 9.34375 7.53125 9.46875 7.6875L9.71875 7.90625C9.84375 8.0625 10.0938 8.0625 10.25 7.90625L13.875 4.28125C14.0312 4.125 14.0312 3.90625 13.875 3.75L10.25 0.125C10.0938 -0.03125 9.84375 -0.03125 9.71875 0.125Z" fill="#111111"></path>
+                    </svg>
+                </a></li>
+            </ul>
+        {% endfor %}
     </ul>
 </div>
 
+
+{# ----------------------------------------------------------- #}
 
 {# Now the following section is irrelevant to this page #}
 
@@ -107,52 +60,17 @@ btnHref: '/'
 
 {# Setting variables to be used later #}
 
-{% set allPosts = collections.post | reverse %}
+{# {% set allPosts = collections.post | reverse %}
 {% set currentPage = 1 %}
-{% set postsPerPage = 3 %}
+{% set postsPerPage = 3 %} #}
 
-{# HOW POSTS WILL LOOK IN ARCHIVES PAGE #}
-{# <ul> #}
-    {# {% for post in posts %} #}
-        {# Another look for all posts #}
-        {# <li><a href="{{ post.url }}">{{ post.data.title }}</a> <i>(written {{ post.date }})</i></li> #}
-
-        {# How list item looks on homepage #}
-        {# <li>
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        {{ post.data.title }}
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        {{ post.data.description }}
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a href="{{ post.url }}" class="button is-fullwidth is-link card-footer-item">Read article</a>
-                </div>
-            </div>
-        </li>
+{# <ul>
+    {% for post in posts %}
+        <li><a href="{{ post.url }}">{{ post.data.title }}</a> <i>(written {{ post.date }})</i></li>
     {% endfor %}
 </ul> #}
 
-<ul class="articles__list">
-    {% for list in lists %}
-        <ul>
-            <li><h4><a href="/categories/{{ list | slugify }}" class="highlighter">{{ list }}</a></h4></li>
-            <li><a class="underline__link" href="/categories/{{ list | slugify }}"><span class="underline__span">{{ list }}</span></a></li>
-            <li><a href="/categories/{{ list | slugify }}" class="highlighter articles__go">
-                Read all articles on {{ list }}
-                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.71875 0.125L9.46875 0.34375C9.34375 0.5 9.34375 0.71875 9.46875 0.875L12.0938 3.46875H0.375C0.15625 3.46875 0 3.65625 0 3.84375V4.15625C0 4.375 0.15625 4.53125 0.375 4.53125H12.0938L9.46875 7.15625C9.34375 7.3125 9.34375 7.53125 9.46875 7.6875L9.71875 7.90625C9.84375 8.0625 10.0938 8.0625 10.25 7.90625L13.875 4.28125C14.0312 4.125 14.0312 3.90625 13.875 3.75L10.25 0.125C10.0938 -0.03125 9.84375 -0.03125 9.71875 0.125Z" fill="#111111"></path>
-                </svg>
-            </a></li>
-        </ul>
-    {% endfor %}
-</ul>
-
+{# ----------------------------------------------------------- #}
 
 <br>
 <br>
