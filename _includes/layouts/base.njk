@@ -3,7 +3,7 @@
   <head>
     {% include "components/head.njk" %}
   </head>
-  <body {% if page.url == "/archives/" %} style ="background-color: #ffffff;" {% endif %}>
+  <body {% if "/archives/" in page.url %} style ="background-color: #ffffff;" {% endif %}>
     {# <header>{% include "components/nav.njk" %}</header> #}
     {% include "components/nav.njk" %}
 
