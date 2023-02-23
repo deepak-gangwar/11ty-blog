@@ -5,6 +5,13 @@
     height: fit-content;
 }
 
+@media screen and (max-width: 480px) {
+    .archives__wrapper {
+        margin-left: var(--space-m);
+        margin-right: var(--space-m);
+    }
+}
+
 .archives__wrapper ul {
     padding: 0;
     list-style-type: none;

@@ -6,6 +6,13 @@
     height: fit-content;
 }
 
+@media screen and (max-width: 480px) {
+    .contact__wrapper {
+        margin-left: var(--space-m);
+        margin-right: var(--space-m);
+    }
+}
+
 .contact__subtitle {
     display: inline-block;
     font-size: var(--font-size-s);

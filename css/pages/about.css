@@ -5,6 +5,13 @@
     height: fit-content;
 }
 
+@media screen and (max-width: 480px) {
+    .about__wrapper {
+        margin-left: var(--space-m);
+        margin-right: var(--space-m);
+    }
+}
+
 .about__subtitle {
     display: inline-block;
     font-size: var(--font-size-s);

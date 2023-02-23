@@ -5,6 +5,14 @@
     /* height: fit-content; */
 }
 
+@media screen and (max-width: 480px) {
+    .tag-page__wrapper {
+        margin-left: var(--space-m);
+        margin-right: var(--space-m);
+    }
+}
+
+
 .tag-page__heading {
     display: flex;
     min-width: fit-content;
