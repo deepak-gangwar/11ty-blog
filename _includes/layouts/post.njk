@@ -38,7 +38,7 @@ new layout for each one.
     </h1>
   </div>
   {# Added this later on. Thought it would be better to describe the post in more wordly subtitle and keep title short. #}
-  <h2 class="post__subtitle">{{ subtitle }}</h2>
+  {% if subtitle %}<h2 class="post__subtitle">{{ subtitle }}</h2>{% endif %}
 
   <hr class="wide-hr">
 
