@@ -15,11 +15,11 @@
 
 
         {# --------- Previous button -------- #}
-        <li class="paginate__item">
+        <li class="paginate__item previous__page">
             {% if pagination.href.previous %}
                 <a href="{{ pagination.href.previous }}" rel="prev" aria-label="Previous page">Previous</a>
             {% else %}
-                Previous
+                <span class="is-disabled">Previous</span>
             {% endif %}
         </li>
 
@@ -50,11 +50,11 @@
 
 
         {# ------------ Next button ----------- #}
-        <li class="paginate__item">
+        <li class="paginate__item next__page">
             {% if pagination.href.next %}
                 <a href="{{ pagination.href.next }}" rel="next"  aria-label="Next page">Next</a>
             {% else %}
-                Next
+                <span class="is-disabled">Next</span>
             {% endif %}
         </li>
 
