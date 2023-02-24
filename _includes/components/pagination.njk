@@ -1,70 +1,72 @@
 {# --------------   PAGINATION COMPONENT FOR ARCHIVES   --------------- #}
 
-<nav role="navigation" aria-labelledby="pagination">
-  <h2 id="my-pagination">This is my Pagination</h2>
-  <ul>
-    {# --------- First button ----------- #}
-    <li>
-        {% if page.url != pagination.href.first %}
-            <a href="{{ pagination.href.first }}" aria-label="First page">First</a>
-        {% else %}
-            First
-        {% endif %}
-    </li>
-
-
-    {# --------- Previous button -------- #}
-    <li>
-        {% if pagination.href.previous %}
-            <a href="{{ pagination.href.previous }}" rel="prev" aria-label="Previous page">Previous</a>
-        {% else %}
-            Previous
-        {% endif %}
-    </li>
-
-
-    {# --------- Expanded pagination -------------- #}
-    {% if pagination.pages.length < 6 %}
-        {%- for pageEntry in pagination.pages %}
-            <li><a href="{{ pagination.hrefs[ loop.index0 ] }}" aria-label="Page {{ loop.index }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
-        {%- endfor %}
-    {% endif %}
-
-
-    {# ---------- Breadcrumbed pagination --------- #}
-    {% if pagination.pages.length > 6 %}
-        {%- for pageEntry in pagination.pages %}
-            {% if loop.index0 < 3 %}
-                <li><a href="{{ pagination.hrefs[ loop.index0 ] }}" aria-label="Page {{ loop.index }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+{# <h2 id="my-pagination">This is my Pagination</h2> #}
+<div class="paginate__container">
+    <nav role="navigation" aria-labelledby="pagination">
+    <ul class="paginate__list">
+        {# --------- First button ----------- #}
+        <li class="paginate__item">
+            {% if page.url != pagination.href.first %}
+                <a href="{{ pagination.href.first }}" aria-label="First page">First</a>
+            {% else %}
+                First
             {% endif %}
-        {%- endfor %}
-            <li>...</li>
-        {# Now the second for loop is to show two last pages by number #}
-        {%- for pageEntry in pagination.pages %}
-            {% if loop.index0 > pagination.pages.length-3 %}
-                <li><a href="{{ pagination.hrefs[ loop.index0 ] }}" aria-label="Page {{ loop.index }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+        </li>
+
+
+        {# --------- Previous button -------- #}
+        <li class="paginate__item">
+            {% if pagination.href.previous %}
+                <a href="{{ pagination.href.previous }}" rel="prev" aria-label="Previous page">Previous</a>
+            {% else %}
+                Previous
             {% endif %}
-        {%- endfor %}
-    {% endif %}
+        </li>
 
 
-    {# ------------ Next button ----------- #}
-    <li>
-        {% if pagination.href.next %}
-            <a href="{{ pagination.href.next }}" rel="next"  aria-label="Next page">Next</a>
-        {% else %}
-            Next
+        {# --------- Expanded pagination -------------- #}
+        {% if pagination.pages.length < 6 %}
+            {%- for pageEntry in pagination.pages %}
+                <li class="paginate__item"><a href="{{ pagination.hrefs[ loop.index0 ] }}" aria-label="Page {{ loop.index }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+            {%- endfor %}
         {% endif %}
-    </li>
 
 
-    {# -------- Last button ------------ #}
-    <li>
-        {% if page.url != pagination.href.last %}
-            <a href="{{ pagination.href.last }}" aria-label="Last page">Last</a>
-        {% else %}
-            Last
+        {# ---------- Breadcrumbed pagination --------- #}
+        {% if pagination.pages.length > 6 %}
+            {%- for pageEntry in pagination.pages %}
+                {% if loop.index0 < 3 %}
+                    <li class="paginate__item"><a href="{{ pagination.hrefs[ loop.index0 ] }}" aria-label="Page {{ loop.index }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+                {% endif %}
+            {%- endfor %}
+                <li class="paginate__item">...</li>
+            {# Now the second for loop is to show two last pages by number #}
+            {%- for pageEntry in pagination.pages %}
+                {% if loop.index0 > pagination.pages.length-3 %}
+                    <li class="paginate__item"><a href="{{ pagination.hrefs[ loop.index0 ] }}" aria-label="Page {{ loop.index }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+                {% endif %}
+            {%- endfor %}
         {% endif %}
-    </li>
-  </ul>
-</nav>
+
+
+        {# ------------ Next button ----------- #}
+        <li class="paginate__item">
+            {% if pagination.href.next %}
+                <a href="{{ pagination.href.next }}" rel="next"  aria-label="Next page">Next</a>
+            {% else %}
+                Next
+            {% endif %}
+        </li>
+
+
+        {# -------- Last button ------------ #}
+        <li class="paginate__item">
+            {% if page.url != pagination.href.last %}
+                <a href="{{ pagination.href.last }}" aria-label="Last page">Last</a>
+            {% else %}
+                Last
+            {% endif %}
+        </li>
+    </ul>
+    </nav>
+</div>

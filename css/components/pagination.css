@@ -1,0 +1,36 @@
+.paginate__container {
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-xs);
+    text-align: center;
+}
+
+.paginate__list {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.paginate__item {
+    /* display: inline-block; */
+    min-width: 32px;
+    padding: 5px 10px;
+    font-style: normal;
+    line-height: 20px;
+    color: var(--color-fg-default);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: border-color .2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+.paginate__item:has(a[aria-current]) {
+    color: var(--color-primary);
+    background-color: var(--color-crimson);
+    border-color: transparent;
+}
