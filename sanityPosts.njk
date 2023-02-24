@@ -1,13 +1,13 @@
 ---
-title: My Sanity Blog Post
-heading: This is my first Sanity blog post
-description: This is a blog post whose content is coming from sanity
-author: Deepak Gangwar
+eleventyComputed:
+    title: "{{ post.title }}"
+    heading: "{{ post.heading }}"
+    description: "{{ post.description }}"
+    author: "{{ post.author.name }}"
 
-tags: 
-    - post
+tags:
+  - post
 
-date: 2021-06-22
 layout: layouts/post.njk
 
 pagination:
@@ -20,8 +20,32 @@ permalink: "/{{ post.slug.current }}/"
 ---
 
 
+{# What would be in pages of sanity posts #}
+
+<h1>Title: {{ post.title }}</h1>
+<h2>Heading: {{ post.heading }}</h2>
+<p>Author: {{ post.author.name }}</p>
+<p>Categories: 
+{% for category in post.categories %}
+  {{ category.title }}
+{% endfor %}</p>
+<p>Date: {{ post.publishedAt }}</p>
+{# <p>Date: {{ new Date(post.publishedAt).toLocaleDateString() }}</p> #}
+<h1>Body 👇</h1>
+{{ post.body | sanityToHTML | safe }}
+
+
+
+
 {# This created so many fucking problems, I couldn't add markdown as my blogpost type
 so they only thing missing was to pass through safe because it was rendering unparse html directy #}
 {# {{ post.body | sanityToHTML }} #}
 
-{{ post.body | sanityToHTML | safe }}
+{% for post in collections.posts %}
+<article>
+  {% include "sanityPosts.njk" %}
+</article>
+{% endfor %}
+
+{# What is happening now is in the post pages that correspond to sanity posts #}
+{# We are having this article tag and inside this articles tag, we have all the matter written above it. #}

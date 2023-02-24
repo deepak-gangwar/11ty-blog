@@ -9,15 +9,22 @@ const client = sanityClient({
 })
 
 module.exports = async function () {
-    const query = `
-    *[ _type == "post" && !(_id in path("drafts.**")) ]{
+  const query = `
+    *[_type == "post" && !(_id in path("drafts.**"))] {
       title,
+      heading,
+      description,
+      body,
       slug { current },
-      author,
-      publishedAt,
-      body
-    } | order(publishedAt desc)
-    `
+      author->{
+        name,
+        image
+      },
+      mainImage,
+      categories[]->{ title },
+      publishedAt } | order(publishedAt desc)
+    `;
+
     // const query = '*[_type == "post"] | order(publishedAt desc)'
     const params = {}
 
