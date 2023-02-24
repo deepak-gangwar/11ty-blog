@@ -9,7 +9,7 @@
             {% if page.url != pagination.href.first %}
                 <a href="{{ pagination.href.first }}" aria-label="First page">First</a>
             {% else %}
-                First
+                <span class="is-disabled">First</span>
             {% endif %}
         </li>
 
@@ -64,7 +64,7 @@
             {% if page.url != pagination.href.last %}
                 <a href="{{ pagination.href.last }}" aria-label="Last page">Last</a>
             {% else %}
-                Last
+                <span class="is-disabled">Last</span>
             {% endif %}
         </li>
     </ul>

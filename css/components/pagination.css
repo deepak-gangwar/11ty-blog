@@ -1,6 +1,6 @@
 .paginate__container {
     margin-top: var(--space-xs);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-l);
     text-align: center;
 }
 
@@ -10,6 +10,13 @@
     display: flex;
     gap: 0.5rem;
     justify-content: center;
+    padding: 0;
+}
+
+@media (max-width: 540px) {
+    .paginate__list {
+        justify-content: space-evenly;
+    }
 }
 
 .paginate__item {
@@ -28,7 +35,7 @@
     transition: border-color .2s cubic-bezier(0.3, 0, 0.5, 1);
 }
 
-.paginate__item a {
+.paginate__item a, .paginate__item span {
     min-width: 32px;
     padding: 5px 10px;
 }
@@ -81,3 +88,8 @@
     }
 }
 
+@media (max-width: 540px) {
+    .paginate__item:not(.next__page):not(.previous__page) {
+        display: none;
+    }
+}
