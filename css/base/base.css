@@ -2,7 +2,7 @@ body {
     position: relative;
     font-family: 'gt-walsheim', system-ui, sans-serif;
     color: var(--color-accent);
-    background-color: var(--color-primary);
+    /* background-color: var(--color-primary); */
 }
 
 ::selection {

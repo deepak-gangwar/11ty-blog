@@ -105,16 +105,26 @@
     border-color: transparent;
 }
 
+.post__wrapper hr {
+    color: var(--color-gray-400);
+}
+
+.post__content h1, h2, h3 {
+    font-family: var(--font-sans);
+    /* font-size: 1.875rem; */
+    font-size: var(--font-size-md);
+    letter-spacing: 0.02em;
+    margin-bottom: var(--space-l);
+    margin-top: var(--space-2xl);
+}
+
 .post__content p {
     color: var(--color-gray-800);
     max-width: 52ch;
     font-size: var(--font-size-sm);
+    font-size: 1.125rem;
     /* max-width: 45ch; */
     /* font-size: var(--font-size-base); */
     line-height: var(--leading-looser);
     margin-bottom: var(--space-m);
-}
-
-.post__wrapper hr {
-    color: var(--color-gray-400);
 }
