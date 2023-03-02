@@ -1,0 +1,24 @@
+.onpage__link {
+    display: block;
+    margin: var(--space-xs) 0;
+    width: 50%;
+}
+
+@supports (clip-path: polygon(50% 0, 100% 50%, 50% 100%)) {
+    .onpage__link::before {
+        display: inline-block;
+        width: 16px;
+        height: 17.5px;
+        vertical-align: text-bottom;
+        content: "";
+        background-color: currentColor;
+    }
+}
+
+@supports (clip-path: polygon(50% 0, 100% 50%, 50% 100%)) {
+    .onpage__link::before {
+        margin-left: -4px;
+        margin-right: var(--space-xs);
+        clip-path: polygon(6.2px 3.2px, 7.3px 3.2px, 11.5px 7.5px, 11.5px 8.5px, 7.3px 12.8px, 6.2px 11.7px, 9.9px 8px, 6.2px 4.3px, 6.2px 3.2px);
+    }
+}

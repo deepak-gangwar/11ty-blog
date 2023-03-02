@@ -7,7 +7,7 @@ if(window.location.href.toString().includes("post")) {
     anchors.forEach(link => {
         // 👇 For the maggie appleton effect on anchors
 
-        // const linkText = link.innerHTML
+        // let linkText = link.innerHTML
         // const linkSpan = document.createElement('span')
         // linkSpan.classList.add('underline__span')
         // linkSpan.innerHTML = linkText
@@ -17,5 +17,34 @@ if(window.location.href.toString().includes("post")) {
         
         // 👇 For james clear effect on anchors
         link.classList.add('highlighter')
+    })
+}
+
+
+// Make all headings as links
+
+const slugify = str =>
+  str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+if(window.location.href.toString().includes("post")) {
+    const headings = document.querySelectorAll('h3')
+    const onpageContainer = document.querySelector('.onpage__list')
+
+    headings.forEach(heading => {
+        let headingText = heading.textContent
+        let headingID = slugify(headingText)
+        heading.setAttribute('id', headingID)
+
+        const onpageLink = document.createElement('a')
+        onpageLink.classList.add('onpage__link')
+        // onpageLink.classList.add('highlighter')
+        onpageLink.innerText = headingText
+        onpageLink.href = `#${headingID}`
+        onpageContainer.appendChild(onpageLink)
     })
 }
