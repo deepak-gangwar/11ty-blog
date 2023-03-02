@@ -21,7 +21,7 @@ if(window.location.href.toString().includes("post")) {
 }
 
 
-// Make all headings as links
+// Make all headings as links and create the onpage component
 
 const slugify = str =>
   str
@@ -42,9 +42,18 @@ if(window.location.href.toString().includes("post")) {
 
         const onpageLink = document.createElement('a')
         onpageLink.classList.add('onpage__link')
-        // onpageLink.classList.add('highlighter')
-        onpageLink.innerText = headingText
+        // onpageLink.innerText = headingText
+
+        const span = document.createElement('span')
+        span.innerText = headingText
+        onpageLink.appendChild(span)
         onpageLink.href = `#${headingID}`
-        onpageContainer.appendChild(onpageLink)
+
+        const li = document.createElement('li')
+        li.className = 'onpage__item'
+        li.appendChild(onpageLink)
+
+        // onpageContainer.appendChild(onpageLink)
+        onpageContainer.appendChild(li)
     })
 }

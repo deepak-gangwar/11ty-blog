@@ -1,7 +1,14 @@
+.onpage__wrapper {
+    color: var(--color-gray-800);
+}
+
+.onpage__list {
+    margin-top: var(--space-2xs-xs);
+}
+
 .onpage__link {
     display: block;
-    margin: var(--space-xs) 0;
-    width: 50%;
+    margin-bottom: calc(var(--space-2xs) - 6px);
 }
 
 @supports (clip-path: polygon(50% 0, 100% 50%, 50% 100%)) {
@@ -12,13 +19,42 @@
         vertical-align: text-bottom;
         content: "";
         background-color: currentColor;
-    }
-}
-
-@supports (clip-path: polygon(50% 0, 100% 50%, 50% 100%)) {
-    .onpage__link::before {
         margin-left: -4px;
         margin-right: var(--space-xs);
         clip-path: polygon(6.2px 3.2px, 7.3px 3.2px, 11.5px 7.5px, 11.5px 8.5px, 7.3px 12.8px, 6.2px 11.7px, 9.9px 8px, 6.2px 4.3px, 6.2px 3.2px);
     }
+}
+
+.onpage__link:hover .onpage__link::before {
+    color: var(--color-cute-purple);
+}
+
+.onpage__link span {
+    display: inline-block;
+    border-bottom: 2px solid var(--color-cute-purple);
+    width: 52%;
+}
+
+.onpage__link span {
+    color: inherit;
+    text-decoration: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f0e8f7), to(#f0e8f7));
+    background-image: linear-gradient(to bottom, #f0e8f7 0%, #f0e8f7 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 111%;
+    -webkit-transition: background-size .25s ease-in;
+    transition: background-size .25s ease-in;
+    padding: 4px 2px 0;
+    border-bottom: 2px solid var(--color-cute-purple);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s
+}
+
+.onpage__link span:hover {
+    background-size: 100% 88%;
+    cursor: pointer;
+    /* border-bottom: 2px solid #f8cd5f; */
+    /* border-bottom: 2px solid var(--color-purple); */
+    border-bottom: 2px solid var(--color-cute-purple);
 }
