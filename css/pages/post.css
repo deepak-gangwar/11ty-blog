@@ -94,7 +94,7 @@
     color: var(--color-bright-crimson);
     border: 1px solid var(--color-gray-400);
     border-radius: 8px;
-    padding: 2px 12px;
+    /* padding: 2px 12px; */
     transition: all 0.3s ease;
 }
 
@@ -105,11 +105,23 @@
     border-color: transparent;
 }
 
+.tag a {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 2.5px 12.5px;
+}
+
 .post__wrapper hr {
     color: var(--color-gray-400);
 }
 
-.post__content h1, h2, h3 {
+.post__content {
+    max-width: 58ch;
+}
+
+.post__content h1, 
+.post__content h2, 
+.post__content h3 {
     font-family: var(--font-sans);
     /* font-size: 1.875rem; */
     font-size: var(--font-size-md);
@@ -120,7 +132,7 @@
 
 .post__content p {
     color: var(--color-gray-800);
-    max-width: 52ch;
+    /* max-width: 52ch; */
     font-size: var(--font-size-sm);
     font-size: 1.125rem;
     /* max-width: 45ch; */
@@ -128,3 +140,63 @@
     line-height: var(--leading-looser);
     margin-bottom: var(--space-m);
 }
+
+.post__content ul, 
+.post__content ol {
+    padding-left: 1.5rem;
+    font-size: var(--font-size-sm);
+    font-size: 1.125rem;
+    line-height: var(--leading-looser);
+    margin-bottom: var(--space-m);
+}
+
+.post__content ul {
+    list-style-type: disc;
+}
+
+.post__content li {
+    padding-left: 1rem;
+}
+
+code {
+    background: var(--color-cream);
+    padding: var(--space-8) var(--space-12);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid #ccc;
+    font-size: var(--font-size-xs);
+    font-weight: normal;
+    line-height: var(--leading-base);
+    font-family: "IBM Plex Mono", "Dank Mono", "SF Mono", consolas;
+}
+
+.post__content a {
+    color: var(--color-sea-blue);
+    font-weight: normal;
+}
+
+.post__content a:hover {
+    text-decoration: underline;
+}
+
+/* code {
+    display: inline-block;
+    margin: 0 0.25em;
+    padding: 0 0.5em;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    color: #343434;
+    font-size: .6944444444rem;
+    line-height: 1.4;
+    font-family: Fira Mono,monospace;
+    font-weight: 400;
+    font-feature-settings: "liga" 0;
+    color: inherit;
+}
+
+code:first-child {
+    margin-left: 0;
+}
+
+code:last-child {
+    margin-right: 0;
+} */

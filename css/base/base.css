@@ -7,7 +7,7 @@ body {
 
 ::selection {
     background: var(--color-cute-purple);
-    /* color: var(--color-salmon); */
+    color: var(--color-accent);
 }
 
 a {
