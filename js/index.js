@@ -40,6 +40,12 @@ if(window.location.href.toString().includes("post")) {
         let headingID = slugify(headingText)
         heading.setAttribute('id', headingID)
 
+        const headingAnchor = document.createElement('a')
+        headingAnchor.href = window.location.href+`#${headingID}`
+        headingAnchor.textContent = headingText
+        heading.removeChild(heading.firstChild)
+        heading.appendChild(headingAnchor)
+
         const onpageLink = document.createElement('a')
         onpageLink.classList.add('onpage__link')
         // onpageLink.innerText = headingText

@@ -128,6 +128,7 @@
     letter-spacing: 0.02em;
     margin-bottom: var(--space-l);
     margin-top: var(--space-2xl);
+    position: relative;
 }
 
 .post__content p {
@@ -171,9 +172,24 @@ code {
 
 .post__content a {
     /* color: var(--color-bright-crimson); */
-    font-weight: normal;
+    /* font-weight: normal; */
 }
 
+.post__content a::before {
+    content: "🔗";
+    position: absolute;
+    left: -55px;
+    transform: scale(0.7);
+    visibility: hidden;
+}
+
+.post__content a:hover {
+    text-decoration: underline;
+}
+
+.post__content a:hover::before {
+    visibility: visible;
+}
 
 /* code {
     display: inline-block;
