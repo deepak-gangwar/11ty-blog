@@ -16,9 +16,11 @@ module.exports = function (eleventyConfig) {
   // Thus using nunjucks to create my styles.css file
 
   eleventyConfig.addPassthroughCopy('assets');
+  eleventyConfig.addPassthroughCopy('js');
 
-  // Watch the `css` directory for changes
+  // Watch the `css` and 'js' directory for changes
   eleventyConfig.addWatchTarget('css');
+  eleventyConfig.addWatchTarget('js');
 
   // To minify HTML
   eleventyConfig.addTransform("htmlmin",  function(content,  outputPath) {

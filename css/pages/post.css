@@ -170,13 +170,10 @@ code {
 }
 
 .post__content a {
-    color: var(--color-sea-blue);
+    /* color: var(--color-bright-crimson); */
     font-weight: normal;
 }
 
-.post__content a:hover {
-    text-decoration: underline;
-}
 
 /* code {
     display: inline-block;
