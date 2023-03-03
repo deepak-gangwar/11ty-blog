@@ -1,6 +1,7 @@
 const { DateTime } = require('luxon');
 const blocksToHtml = require('@sanity/block-content-to-html');
 const htmlmin = require("html-minifier");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 
 module.exports = function (eleventyConfig) {
@@ -21,6 +22,9 @@ module.exports = function (eleventyConfig) {
   // Watch the `css` and 'js' directory for changes
   eleventyConfig.addWatchTarget('css');
   eleventyConfig.addWatchTarget('js');
+
+  // Prism.js plugin for syntax highlighting in coder's block
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // To minify HTML
   eleventyConfig.addTransform("htmlmin",  function(content,  outputPath) {

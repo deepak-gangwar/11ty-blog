@@ -64,9 +64,9 @@ new layout for each one.
 
   {# --------------- Tags ------------------ #}
   <div class="post__tags">
-    <ul class="tags__list">
+    <ul class="metadata__tags__list">
       {% for tag in tags %}
-        <li class="tag">
+        <li class="metadata__tag">
           <a href="/categories/{{ tag | slugify }}">{{tag}}</a>
           {# <a href="/categories/{{ tag | slugify }}">{{tag}}</a> #}
         </li>
