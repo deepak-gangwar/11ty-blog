@@ -358,7 +358,20 @@ pre {
     color: var(--color-lilac-no-swop);
     font-weight: 700;
     margin-left: .5ch;
-    margin-right: .5ch
+    margin-right: .5ch;
+}
+
+:not(pre)>code {
+    /* padding: .1em;
+    border-radius: .3em; */
+    background: var(--color-cream);
+    padding: var(--space-8) var(--space-12);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid #ccc;
+    font-size: var(--font-size-xs);
+    font-weight: normal;
+    line-height: var(--leading-base);
+    font-family: "IBM Plex Mono", "Dank Mono", "SF Mono", consolas;
 }
 
 .post__content pre>code {
@@ -377,7 +390,7 @@ pre {
 }
 
 /* .post__content pre[class*=language-]:after { */
-.post__content pre:after {
+.post__content pre code:after {
     font-family: Mosk,sans-serif;
     /* font-size: var(--step--1); */
     font-size: var(--font-sizs-xs);
@@ -400,22 +413,22 @@ pre {
     margin-top: 4rem
 }
 
-.post__content pre.language-css:after {
+.post__content pre code.language-css:after {
     content: "CSS"
 }
 
-.post__content pre.language-svg:after {
+.post__content pre code.language-svg:after {
     content: "SVG"
 }
 
-.post__content pre.language-html:after {
+.post__content pre code.language-html:after {
     content: "HTML"
 }
 
-.post__content pre.language-js:after {
+.post__content pre code.language-js:after {
     content: "JS"
 }
 
-.post__content pre.language-json:after {
+.post__content pre code.language-json:after {
     content: "data.html"
 }
