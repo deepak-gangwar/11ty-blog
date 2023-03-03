@@ -159,7 +159,7 @@
     padding-left: 1rem;
 }
 
-code {
+/* code {
     background: var(--color-cream);
     padding: var(--space-8) var(--space-12);
     border-radius: var(--border-radius-sm);
@@ -168,7 +168,7 @@ code {
     font-weight: normal;
     line-height: var(--leading-base);
     font-family: "IBM Plex Mono", "Dank Mono", "SF Mono", consolas;
-}
+} */
 
 .post__content a {
     /* color: var(--color-bright-crimson); */
@@ -213,3 +213,209 @@ code:first-child {
 code:last-child {
     margin-right: 0;
 } */
+
+
+:root {
+    --color-mint: #6fdcbf;
+    --color-mint-no-swop: #6fdcbf;
+    --color-mint-up: #a5d4bb;
+    --color-mint-down: #55af96;
+    --color-lilac: #ae8fdb;
+    --color-lilac-no-swop: #ae8fdb;
+    --color-sea: #72cada;
+    --color-highlight: #ae8fdb;
+    --color-lilac-up: #b1b1d8;
+    --color-sherbet: #fef8b4;
+    --color-rose: #dc849b;
+    --color-marshmellow: #d695b6;
+    --color-peach: #f2c3c0;
+    --color-biscuit: #ad998a;
+    --color-oat: #cbc1bd;
+    --color-light: #f7f7f7;
+    --color-light-down: #fafafa;
+    --color-light-down-2: #f4f5f5;
+    --color-light-down-3: #ecedee;
+    --color-light-fade: #eeebef;
+    --color-mid: #cccccc;
+    --color-dark: #404040;
+    --color-dark-down: #303145;
+    --color-dark-no-swop: #404040
+}
+
+:root {
+    --color-mint: hsl(164, 61%, 65%);
+    --color-mint-up: hsl(148, 35%, 74%);
+    --color-mint-down: hsl(163, 36%, 51%);
+    --color-lilac: hsl(264, 51%, 71%);
+    --color-sea: hsl(189, 58%, 65%);
+    --color-highlight: hsl(264, 51%, 71%);
+    --color-lilac-up: hsl(240, 33%, 77%);
+    --color-sherbet: hsl(55, 97%, 85%);
+    --color-sherbet-fade: hsl(55, 100%, 94%);
+    --color-rose: hsl(344, 56%, 69%);
+    --color-marshmellow: hsl(329, 44%, 71%);
+    --color-peach: hsl(4, 65%, 85%);
+    --color-biscuit: hsl(26, 18%, 61%);
+    --color-oat: hsl(17, 12%, 77%);
+    --color-light: hsl(0, 0%, 97%);
+    --color-light-fade: hsl(300, 11%, 96%);
+    --color-light-down: hsl(210, 4%, 98%);
+    --color-light-down-2: hsl(210, 4%, 96%);
+    --color-light-down-3: hsl(210, 4%, 93%);
+    --color-mid: hsl(0, 0%, 80%);
+    --color-dark: hsl(0, 0%, 25%);
+    --color-dark-opacity: hsla(0, 0%, 25%, 0.3);
+    --color-dark-down: hsl(237, 18%, 23%);
+    --color-mint-selection: rgba(111, 220, 191, 0.9);
+    --color-lilac-selection: rgba(173, 143, 219, 0.9);
+    --color-light-selection: rgba(247, 247, 247, 0.99);
+    --color-dark-selection: rgba(64, 64, 64, 0.99);
+}
+
+
+pre {
+    --color-mint: hsl(164, 61%, 65%);
+    --color-lilac: hsl(264, 51%, 71%);
+    --color-sea: hsl(189, 58%, 65%);
+    --color-sherbet: hsl(55, 97%, 85%);
+    --color-rose: hsl(344, 56%, 69%);
+    --color-marshmellow: hsl(329, 44%, 71%);
+    --color-peach: hsl(4, 65%, 85%);
+    --color-light: hsl(0, 0%, 97%);
+    --color-dark-down: hsl(237, 18%, 23%);
+}
+
+/* code[class*=language-], pre[class*=language-] { */
+code[class*=language-], pre {
+    font-family: Consolas,Menlo,Monaco,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L","Courier New",Courier,monospace;
+    line-height: 1.375;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    background: var(--color-dark-down);
+    color: #e6a3de;
+}
+
+/* code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection { */
+code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre ::-moz-selection,pre::-moz-selection {
+    text-shadow: none
+}
+
+/* code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection { */
+code[class*=language-] ::selection,code[class*=language-]::selection,pre ::selection,pre::selection {
+    text-shadow: none
+}
+
+/* pre[class*=language-] { */
+pre {
+    padding: 1em;
+    margin: 1rem 0;
+    overflow: auto
+}
+
+:not(pre)>code[class*=language-] {
+    padding: .1em;
+    border-radius: .3em
+}
+
+.post__content pre {
+    position: relative;
+    border-radius: 15px
+}
+
+.post__content pre * ::-webkit-scrollbar {
+    width: 11px
+}
+
+.post__content pre * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-lilac-no-swop) var(--color-dark-no-swop)
+}
+
+.post__content pre ::-webkit-scrollbar-track {
+    background: var(--color-dark-no-swop)
+}
+
+.post__content pre ::-webkit-scrollbar-thumb {
+    background-color: var(--color-lilac-no-swop);
+    border-radius: 6px;
+    border: 3px solid var(--color-dark-no-swop)
+}
+
+.post__content code {
+    /* font-size: var(--step-0); */
+    font-size: var(--font-size-xs);
+    white-space: pre;
+    color: var(--color-lilac-no-swop);
+    font-weight: 700;
+    margin-left: .5ch;
+    margin-right: .5ch
+}
+
+.post__content pre>code {
+    overflow: auto;
+    position: unset;
+    width: 100%;
+    margin-right: 0;
+    --color-selection: var(--color-lilac);
+    --color-selection-bg: var(--color-light-selection)
+}
+
+/* .post__content pre[class*=language-] { */
+.post__content pre {
+    overflow: visible;
+    margin-top: 2rem
+}
+
+/* .post__content pre[class*=language-]:after { */
+.post__content pre:after {
+    font-family: Mosk,sans-serif;
+    /* font-size: var(--step--1); */
+    font-size: var(--font-sizs-xs);
+    position: absolute;
+    content: "";
+    bottom: 100%;
+    right: 1.5rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: inherit;
+    color: var(--color-lilac-up);
+    padding: .5rem .5rem 0 .5rem;
+    min-width: 3rem;
+    text-align: center;
+    letter-spacing: 1px
+}
+
+/* .post__content pre[class*=language-]+pre[class*=language-] { */
+.post__content pre+pre {
+    margin-top: 4rem
+}
+
+.post__content pre.language-css:after {
+    content: "CSS"
+}
+
+.post__content pre.language-svg:after {
+    content: "SVG"
+}
+
+.post__content pre.language-html:after {
+    content: "HTML"
+}
+
+.post__content pre.language-js:after {
+    content: "JS"
+}
+
+.post__content pre.language-json:after {
+    content: "data.html"
+}
