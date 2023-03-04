@@ -175,7 +175,7 @@
     /* font-weight: normal; */
 }
 
-.post__content a::before {
+.section-direct-links::before {
     content: "🔗";
     position: absolute;
     left: -55px;
@@ -183,11 +183,11 @@
     visibility: hidden;
 }
 
-.post__content a:hover {
+.section-direct-links:hover {
     text-decoration: underline;
 }
 
-.post__content a:hover::before {
+.section-direct-links:hover::before {
     visibility: visible;
 }
 

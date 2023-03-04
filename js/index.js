@@ -43,6 +43,7 @@ if(window.location.href.toString().includes("post")) {
         const headingAnchor = document.createElement('a')
         headingAnchor.href = window.location.href+`#${headingID}`
         headingAnchor.textContent = headingText
+        headingAnchor.className = 'section-direct-links'
         heading.removeChild(heading.firstChild)
         heading.appendChild(headingAnchor)
 
