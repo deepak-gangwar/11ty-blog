@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {#The contents in double curly braces are Nunjucks variables that will be replaced accordingly when a derivative page is being built#}
-<title>{{ title }}</title>
+<title>{{ page.inputPath }}{{ title }}</title>
 
 <meta name="author" content="{% if author %}{{ author }}{% else %}Deepak Gangwar{% endif %}"/>
 <meta name="copyright" content="Copyright &copy; 2023 Deepak Gangwar."/>
@@ -65,6 +65,9 @@
 {# <link rel="stylesheet" href="/css/styles.css"> #}
 {# Updated this because now I am using multiple css files and importing them, thus using nunjucks to create my css file #}
 <link rel="stylesheet" href="/styles.css">
+
+{# include the page template CSS (page specific styles) #}
+{# {{ src.css(page.inputPath) }} #}
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4FJE419EX"></script>
