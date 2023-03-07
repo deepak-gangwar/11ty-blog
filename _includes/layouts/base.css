@@ -1,0 +1,63 @@
+body {
+    position: relative;
+    font-family: 'gt-walsheim', system-ui, sans-serif;
+    color: var(--color-accent);
+    background-color: var(--color-primary);
+}
+
+::selection {
+    background: var(--color-cute-purple);
+    color: var(--color-accent);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    min-height: 80vh;
+}
+
+/* These styles were needed when the bottom copyright was the <small> tag. */
+/* Now replaced by footer */
+
+/* #copyright {
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+} */
+
+
+p.para {
+    /* font-size: 21px; */
+    /* line-height: 165%; */
+    font-size: var(--font-size-base);
+    line-height: var(--leading-looser);
+    
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 63.99875em) {
+	p.para {
+    	/* font-size: 20px; */
+    	/* line-height: 150%; */
+        line-height: var(--leading-looser);
+	}
+}
+
+.accent {
+    background: var(--color-gray-800);
+    display: inline-block;
+    margin-left: 30px;
+    width: 100px;
+    height: 1px;
+}

@@ -52,6 +52,18 @@
 <meta name="msapplication-TileImage" content="https://res.cloudinary.com/dsd5tjyri/image/upload/v1675933192/11ty-blog/favicon-144_cvlvjr.png" />
 <meta name="msapplication-config" content="browserconfig.xml" />
 
+
+{# Inline styles - base styles that are common for all the pages #}
+<!-- store the css file content as a string variable -->
+{% set cssStr %}
+    {% include "../layouts/base.css" %}
+{% endset %}
+<!-- interpolate it in style tag -->
+<style>
+    {{ cssStr  | safe }}
+</style>
+
+{# External stylesheet - styles that are unique to individual pages and is added as external file #}
 {# <link rel="stylesheet" href="/css/styles.css"> #}
 {# Updated this because now I am using multiple css files and importing them, thus using nunjucks to create my css file #}
 <link rel="stylesheet" href="/styles.css">
