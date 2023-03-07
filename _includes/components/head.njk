@@ -1,3 +1,7 @@
+<!-- import the macro -->
+{% import "src.macro.njk" as src with context %}
+
+
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,14 +58,8 @@
 
 
 {# Inline styles - base styles that are common for all the pages #}
-<!-- store the css file content as a string variable -->
-{% set cssStr %}
-    {% include "../layouts/base.css" %}
-{% endset %}
-<!-- interpolate it in style tag -->
-<style>
-    {{ cssStr  | safe }}
-</style>
+{# use the css macro #}
+{{ src.css('./layouts/base.css') }}
 
 {# External stylesheet - styles that are unique to individual pages and is added as external file #}
 {# <link rel="stylesheet" href="/css/styles.css"> #}

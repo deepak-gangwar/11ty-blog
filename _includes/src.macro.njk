@@ -1,0 +1,16 @@
+<!-- macro for css, accept a filename as input -->
+{% macro css(filename) %}
+    <!-- store the css file content as a string variable -->
+    {% set cssStr %}
+        {% include filename %}
+    {% endset %}
+
+    <!-- interpolate it in style tag -->
+    <style>
+        {{ cssStr | safe }}
+    </style>
+{% endmacro %}
+
+{# We can reuse the macros this way for all layouts/pages 
+(e.g. wiriting.layout.njk) - Import the macro, then use it 
+by passing in the filename #}
