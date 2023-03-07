@@ -1,8 +1,15 @@
 <!-- macro for css, accept a filename as input -->
 {% macro css(filename) %}
+
+    <!-- change relative path -->
+    {% set path = filename | replace('./src/', '../') %}
+    <!-- replace file extension -->
+    {% set path = utils.replaceExtension(path, 'css') %}
+    
     <!-- store the css file content as a string variable -->
+    <!-- ignore if missing -->
     {% set cssStr %}
-        {% include filename %}
+        {% include filename ignore missing %}
     {% endset %}
 
     <!-- interpolate it in style tag -->
