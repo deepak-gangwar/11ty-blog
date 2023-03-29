@@ -525,3 +525,7 @@ pre>code.highlight {
 .post__content pre.language-bash:after {
     content: "bash"
 }
+
+.post__content pre.language-glsl:after {
+    content: "glsl"
+}
