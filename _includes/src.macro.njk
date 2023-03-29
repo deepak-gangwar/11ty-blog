@@ -2,9 +2,12 @@
 {% macro css(filename) %}
 
     <!-- change relative path -->
-    {% set path = filename | replace('./src/', '../') %}
-    <!-- replace file extension -->
-    {% set path = utils.replaceExtension(path, 'css') %}
+    {# {% set path = filename | replace('./src/', '../') %} #}
+    {% if filename !== "./index.njk" %}
+        {% set path = filename | replace('./'+page.fileSlug, '') %}
+        <!-- replace file extension -->
+        {% set path = utils.replaceExtension(path, 'css') %}
+    {% endif %}
     
     <!-- store the css file content as a string variable -->
     <!-- ignore if missing -->
@@ -13,9 +16,11 @@
     {% endset %}
 
     <!-- interpolate it in style tag -->
-    <style>
+    <link rel="stylesheet" href={{ "css"+path }}>
+
+    {# <style>
         {{ cssStr | safe }}
-    </style>
+    </style> #}
 {% endmacro %}
 
 {# We can reuse the macros this way for all layouts/pages 
