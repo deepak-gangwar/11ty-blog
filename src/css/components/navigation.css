@@ -1,3 +1,28 @@
+.skip-link:focus {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: .8rem 1.25rem 1rem 1.25rem;
+  background-color: var(--color-cute-purple);
+  color: var(--color-accent);
+  line-height: 1;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.skip-link:not(:focus),.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+            
 .nav {
   position: relative;
   transition-property: color, background-color, border-color, text-decoration-color, fill,
