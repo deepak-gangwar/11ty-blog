@@ -3,6 +3,7 @@
 _site
 
 # compiled output
+_site
 /dist
 /tmp
 /out-tsc
