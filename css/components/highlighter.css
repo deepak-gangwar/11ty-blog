@@ -1,45 +1,51 @@
 /* Highilghter Underline effect for anchors */
 
 .highlighter {
-    background-color: transparent
+  background-color: transparent;
 }
 
 .highlighter .aricle-llink {
-    text-decoration: none;
-    color: inherit;
-    margin-top: 64px;
-    display: block;
-    background: none;
-    border-bottom: 0
+  text-decoration: none;
+  color: inherit;
+  margin-top: 64px;
+  display: block;
+  background: none;
+  border-bottom: 0;
 }
 
 .highlighter .aricle-llink h2 {
-    margin-bottom: 24px
+  margin-bottom: 24px;
 }
 
 .highlighter .nostyle {
-    text-decoration: none;
-    color: inherit
+  text-decoration: none;
+  color: inherit;
 }
 
 .highlighter {
-    color: inherit;
-    text-decoration: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#FEF5DF), to(#FEF5DF));
-    background-image: linear-gradient(to bottom, #FEF5DF 0%, #FEF5DF 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 111%;
-    -webkit-transition: background-size .25s ease-in;
-    transition: background-size .25s ease-in;
-    padding: 2px 2px 0px 0;
-    border-bottom: 2px solid #E2DDCA;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s
+  color: inherit;
+  text-decoration: none;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fef5df),
+    to(#fef5df)
+  );
+  background-image: linear-gradient(to bottom, #fef5df 0%, #fef5df 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  background-position: 0 111%;
+  -webkit-transition: background-size 0.25s ease-in;
+  transition: background-size 0.25s ease-in;
+  padding: 2px 2px 0px 0;
+  border-bottom: 2px solid #e2ddca;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .highlighter:hover {
-    background-size: 100% 88%;
-    cursor: pointer;
-    border-bottom: 2px solid #f8cd5f;
+  background-size: 100% 88%;
+  cursor: pointer;
+  border-bottom: 2px solid #f8cd5f;
 }

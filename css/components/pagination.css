@@ -1,95 +1,118 @@
 .paginate__container {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-l);
-    text-align: center;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-l);
+  text-align: center;
 }
 
 .paginate__list {
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    padding: 0;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0;
 }
 
 @media (max-width: 540px) {
-    .paginate__list {
-        justify-content: space-evenly;
-    }
+  .paginate__list {
+    justify-content: space-evenly;
+  }
 }
 
 .paginate__item {
-    padding: 4px 0;
-    font-style: normal;
-    line-height: 20px;
-    color: var(--color-fg-default);
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    transition: border-color .2s cubic-bezier(0.3, 0, 0.5, 1);
+  padding: 4px 0;
+  font-style: normal;
+  line-height: 20px;
+  color: var(--color-fg-default);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: border-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
 }
 
-.paginate__item a, .paginate__item span {
-    min-width: 32px;
-    padding: 5px 10px;
+.paginate__item a,
+.paginate__item span {
+  min-width: 32px;
+  padding: 5px 10px;
 }
 
 .paginate__item:has(a[aria-current]) {
-    color: var(--color-primary);
-    background-color: var(--color-crimson);
-    border-color: transparent;
+  color: var(--color-primary);
+  background-color: var(--color-crimson);
+  border-color: transparent;
 }
 
 .paginate__item:hover {
-    text-decoration: none;
-    border-color: var(--color-gray-400);
-    transition-duration: .1s;
+  text-decoration: none;
+  border-color: var(--color-gray-400);
+  transition-duration: 0.1s;
 }
 
-.paginate__item:has(.is-disabled), .paginate__item.paginate__item:has(.is-disabled):hover {
-    color: var(--color-gray-400);
-    cursor: default;
-    border-color: transparent;
+.paginate__item:has(.is-disabled),
+.paginate__item.paginate__item:has(.is-disabled):hover {
+  color: var(--color-gray-400);
+  cursor: default;
+  border-color: transparent;
 }
 
-.previous__page, .next__page {
-    color: #0969da;
-}
-
-@supports (clip-path: polygon(50% 0, 100% 50%, 50% 100%)) {
-    .previous__page::before, 
-    .next__page::after {
-        display: inline-block;
-        width: 16px;
-        height: 17.5px;
-        vertical-align: text-bottom;
-        content: "";
-        background-color: currentColor;
-    }
+.previous__page,
+.next__page {
+  color: #0969da;
 }
 
 @supports (clip-path: polygon(50% 0, 100% 50%, 50% 100%)) {
-    .previous__page::before {
-        margin-right: 4px;
-        clip-path: polygon(9.8px 12.8px, 8.7px 12.8px, 4.5px 8.5px, 4.5px 7.5px, 8.7px 3.2px, 9.8px 4.3px, 6.1px 8px, 9.8px 11.7px, 9.8px 12.8px);
-    }
+  .previous__page::before,
+  .next__page::after {
+    display: inline-block;
+    width: 16px;
+    height: 17.5px;
+    vertical-align: text-bottom;
+    content: '';
+    background-color: currentColor;
+  }
 }
 
 @supports (clip-path: polygon(50% 0, 100% 50%, 50% 100%)) {
-    .next__page::after {
-        margin-left: 4px;
-        clip-path: polygon(6.2px 3.2px, 7.3px 3.2px, 11.5px 7.5px, 11.5px 8.5px, 7.3px 12.8px, 6.2px 11.7px, 9.9px 8px, 6.2px 4.3px, 6.2px 3.2px);
-    }
+  .previous__page::before {
+    margin-right: 4px;
+    clip-path: polygon(
+      9.8px 12.8px,
+      8.7px 12.8px,
+      4.5px 8.5px,
+      4.5px 7.5px,
+      8.7px 3.2px,
+      9.8px 4.3px,
+      6.1px 8px,
+      9.8px 11.7px,
+      9.8px 12.8px
+    );
+  }
+}
+
+@supports (clip-path: polygon(50% 0, 100% 50%, 50% 100%)) {
+  .next__page::after {
+    margin-left: 4px;
+    clip-path: polygon(
+      6.2px 3.2px,
+      7.3px 3.2px,
+      11.5px 7.5px,
+      11.5px 8.5px,
+      7.3px 12.8px,
+      6.2px 11.7px,
+      9.9px 8px,
+      6.2px 4.3px,
+      6.2px 3.2px
+    );
+  }
 }
 
 @media (max-width: 540px) {
-    .paginate__item:not(.next__page):not(.previous__page) {
-        display: none;
-    }
+  .paginate__item:not(.next__page):not(.previous__page) {
+    display: none;
+  }
 }

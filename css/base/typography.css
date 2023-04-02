@@ -1,21 +1,21 @@
 /* Fonts */
 @font-face {
-    font-family: 'canela';
-    font-style: normal;
-    font-display: block;
-    src: url('/assets/fonts/Canela.woff2') format('woff2');
+  font-family: 'canela';
+  font-style: normal;
+  font-display: block;
+  src: url('/assets/fonts/Canela.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'neue montreal';
-    font-style: normal;
-    font-display: block;
-    src: url('/assets/fonts/NeueMontreal.woff2') format('woff2');
+  font-family: 'neue montreal';
+  font-style: normal;
+  font-display: block;
+  src: url('/assets/fonts/NeueMontreal.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'gt-walsheim';
-    font-style: normal;
-    font-display: block;
-    src: url('/assets/fonts/GT-Walsheim.woff2') format('woff2');
+  font-family: 'gt-walsheim';
+  font-style: normal;
+  font-display: block;
+  src: url('/assets/fonts/GT-Walsheim.woff2') format('woff2');
 }

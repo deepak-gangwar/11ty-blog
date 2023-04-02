@@ -1,6 +1,6 @@
 {
-    "emmet.includeLanguages": {
-        "njk": "html",
-        "nunjucks": "html"
-    }
+  "emmet.includeLanguages": {
+    "njk": "html",
+    "nunjucks": "html"
+  }
 }
