@@ -15,12 +15,12 @@ module.exports = function (eleventyConfig) {
   // commented this because now I am using multiple css files and import syntax
   // Thus using nunjucks to create my styles.css file
 
-  eleventyConfig.addPassthroughCopy('assets');
-  eleventyConfig.addPassthroughCopy('js');
+  eleventyConfig.addPassthroughCopy('src/assets');
+  eleventyConfig.addPassthroughCopy('src/js');
 
   // Watch the `css` and 'js' directory for changes
-  eleventyConfig.addWatchTarget('css');
-  eleventyConfig.addWatchTarget('js');
+  eleventyConfig.addWatchTarget('src/css');
+  eleventyConfig.addWatchTarget('src/js');
 
   // Prism.js plugin for syntax highlighting in coder's block
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -58,9 +58,9 @@ module.exports = function (eleventyConfig) {
   // Set up input and output folders
   return {
     dir: {
-      // input: "src",
+      input: "src",
       // includes: "_includes",
-      // output: "_site"
+      output: "_site"
     },
     templateFormats: ['md', 'njk'],
     dataTemplateEngine: 'njk',
