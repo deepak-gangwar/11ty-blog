@@ -60,3 +60,39 @@ p.para {
   width: 100px;
   height: 1px;
 }
+
+/* To be used in syntax highlighting. Coming from cassie evans */
+pre {
+  --color-mint: hsl(164, 61%, 65%);
+  --color-lilac: hsl(264, 51%, 71%);
+  --color-sea: hsl(189, 58%, 65%);
+  --color-sherbet: hsl(55, 97%, 85%);
+  --color-rose: hsl(344, 56%, 69%);
+  --color-marshmellow: hsl(329, 44%, 71%);
+  --color-peach: hsl(4, 65%, 85%);
+  --color-light: hsl(0, 0%, 97%);
+  --color-dark-down: hsl(237, 18%, 23%);
+}
+
+
+/* 
+* Scrollbar styles
+* ================
+* This all mess below is to have the ability to add a custom horizontal scrollbar
+* to the code blocks while trying to keep side scrollbar as default looking.
+*/
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+* {
+  scrollbar-width: auto;
+}
+*::-webkit-scrollbar-track {
+  background: var(--color-tinted-cream);
+  background: #f1f1f1;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #a8a8a8;
+  border: 1px solid #f1f1f1;
+}
