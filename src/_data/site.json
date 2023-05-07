@@ -1,6 +1,9 @@
 {
+  "name": "Deepak Gangwar's blog",
   "title": "Deepak Gangwar's blog",
-  "url": "https://11ty.deepakgangwar.me",
+  "url": "https://11ty.deepakgangwar.com",
   "language": "en-US",
-  "description": "A simple blog with awesome content"
+  "description": "A simple blog with awesome content",
+  "authorName": "Deepak Gangwar",
+  "authorLink": "https://deepakgangwar.com"
 }

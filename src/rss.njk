@@ -1,0 +1,51 @@
+---
+permalink: '/rss.xml'
+---
+<?xml version="1.0" encoding="utf-8"?>
+{# <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"> #}
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        {# <atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml"/> #}
+        <title>{{ site.name }}</title>
+        <link>{{ site.url }}</link>
+        <description>{{ site.description }}</description>
+        {# <lastBuildDate>{{ collections.posts | rssLastUpdatedDate | buildRFC822Date }}</lastBuildDate> #}
+        {% for post in collections.post | reverse %}
+            {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
+            <item>
+                <title>
+                    <![CDATA[{{post.data.title}}]]>
+                </title>
+                <link>{{ absolutePostUrl }}</link>
+                <guid>{{ absolutePostUrl }}</guid>
+                {# <pubDate>{{ post.date | buildRFC822Date }}</pubDate> #}
+                {# <content type="html">{{ post.templateContent | safe }}</content> #}
+                <content:encoded>
+                    <![CDATA[{{ post.templateContent | safe }}]]>
+                </content:encoded>
+            </item>
+        {% endfor %}
+    </channel>
+</rss>
+
+{# <feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ site.name }}</title>
+    <subtitle>{{ site.description }}</subtitle>
+    <link href="{{ site.url }}{{ permalink }}" rel="self"/>
+    <link href="{{ site.url }}/"/>
+    <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+    <id>{{ site.url }}</id>
+    <author>
+        <name>{{ site.authorName }}</name>
+    </author>
+    {% for post in collections.post | reverse %}
+        {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
+        <entry>
+            <title>{{ post.data.title }}</title>
+            <link href="{{ absolutePostUrl }}"/>
+            <updated>{{ post.date | dateToRfc3339 }}</updated>
+            <guid>{{ absolutePostUrl }}</guid>
+            <content type="html">{{ post.templateContent | safe }}</content>
+        </entry>
+    {% endfor %}
+</feed> #}
