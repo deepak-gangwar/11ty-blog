@@ -19,10 +19,9 @@ permalink: '/rss.xml'
                 <link>{{ absolutePostUrl }}</link>
                 <guid>{{ absolutePostUrl }}</guid>
                 {# <pubDate>{{ post.date | buildRFC822Date }}</pubDate> #}
-                {# <content type="html">{{ post.templateContent | safe }}</content> #}
-                <content:encoded>
+                {# <content:encoded>
                     <![CDATA[{{ post.templateContent | safe }}]]>
-                </content:encoded>
+                </content:encoded> #}
             </item>
         {% endfor %}
     </channel>

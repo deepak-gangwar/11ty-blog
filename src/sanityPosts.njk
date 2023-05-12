@@ -16,9 +16,8 @@ pagination:
     alias: post
     addAllPagesToCollections: true
 
-permalink: "/{{ post.slug.current }}/"
+permalink: "/posts/{{ post.slug.current }}/"
 ---
-
 
 {# What would be in pages of sanity posts #}
 
@@ -26,25 +25,24 @@ permalink: "/{{ post.slug.current }}/"
 <h2>Heading: {{ post.heading }}</h2>
 <p>Author: {{ post.author.name }}</p>
 <p>Categories: 
-{% for category in post.categories %}
-  {{ category.title }}
-{% endfor %}</p>
-<p>Date: {{ post.publishedAt }}</p>
+    {# {{ post.categories }} #}
+  {% for category in post.categories %}
+    {{ category.title }}
+  {% endfor %}
+</p>
+<p>Date: {{ post.publishedAt | buildRFC822Date }}</p>
 {# <p>Date: {{ new Date(post.publishedAt).toLocaleDateString() }}</p> #}
 <h1>Body 👇</h1>
 {{ post.body | sanityToHTML | safe }}
-
-
-
 
 {# This created so many fucking problems, I couldn't add markdown as my blogpost type
 so they only thing missing was to pass through safe because it was rendering unparse html directy #}
 {# {{ post.body | sanityToHTML }} #}
 
 {% for post in collections.posts %}
-<article>
-  {% include "sanityPosts.njk" %}
-</article>
+  <article>
+    {% include "sanityPosts.njk" %}
+  </article>
 {% endfor %}
 
 {# What is happening now is in the post pages that correspond to sanity posts #}
